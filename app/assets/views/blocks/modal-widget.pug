@@ -1,0 +1,28 @@
+template#modal-widget
+  .modal__header
+    .modal__header-back(onclick="modal.close()")
+      include ../../img/icons/back.svg
+      | Виджеты
+    .modal__header-title
+      include ../../img/icons/devider.svg
+      | UniSender
+
+  .modal__slider
+
+  .modal__content
+    .modal__panel
+      img.widget-modal__img(src="img/demo/logos/1.png" alt="widget")
+      button.widget-modal__btn.btn.btn--accent Подключить
+
+    .modal__tab.tab
+      a.tab__item.active(href="#modal-widget-desc") Описание
+      a.tab__item(href="#modal-widget-settings") Настройки
+
+    .modal__text#modal-widget-desc
+      p Для того чтобы настроить прием платежей через сервис Яндекс.Касса, выполните следующие действия:
+      ol
+        li Зарегистрируйтесь на сайте <a href="#!">Яндекс.Касса</a>.
+        li На странице регистрации заполните все поля и нажмите «Отправить заявку».
+        li После того как процедура регистрации завершена и все необходимые анкеты заполнены, в <a href="#!">личном кабинете</a> Вам необходимо выбрать пункт «Способ подключения».
+        li Из предложенных способов выберите «HTTP-протокол» и нажмите кнопку «Далее».<br> Внимание! В случае изменения домена (адреса вашего сайта) прием оплаты работать не будет.<br> Если вы планируете изменить домен (подключить внешний), сделайте это до подключения приема оплаты.
+        li Необходимо заполнить все поля в предложенной таблице и нажать «Сохранить».

@@ -1,0 +1,61 @@
+.widgets
+
+  &__list
+    display: block @md flex
+    margin: -1px
+
+    &-wrapper
+      box: wrap
+      border: 1px solid #f7f7f7
+      border-right: 0
+      border-bottom: 0
+
+    &-menu
+      margin-right: @md 2rem
+
+  &__item
+    box: vertical center middle
+    height: 115px @sm 130px
+    border: 1px solid #f7f7f7
+    border-left: 0
+    border-top: 0
+    width: 50% @sm calc(100% / 3)
+    cursor: pointer
+    position: relative
+    z-index: 2
+    transition: background .1s ease, box-shadow .2s ease
+    overflow: hidden
+    padding: * .5rem @lg * 1rem
+    padding-bottom: .5rem @sm .8rem @md 1rem
+
+    &:hover
+      background: #f4f8fc
+      border-color: #f4f8fc
+      box-shadow: 0 0 0 1px #f4f8fc, 0 64px 64px 0 rgba(0,0,0,.02), 0 32px 32px 0 rgba(0,0,0,.02), 0 16px 16px 0 rgba(0,0,0,.02), 0 8px 8px 0 rgba(0,0,0,.02), 0 4px 4px 0 rgba(0,0,0,.02), 0 2px 2px 0 rgba(0,0,0,.02)
+      z-index: 4
+
+    &-img
+      margin-top: auto
+      max-width: calc(100% - 3rem)
+      max-height: 32px @xs 40px @sm 50px @md 60px @xl unset
+
+    &-text
+      text: #727272 13px 1.2 center @sm 14px
+      margin-top: auto
+
+    &-status
+      position: absolute 0 0 null null
+      box: center
+      padding: 7px
+
+      > *
+        margin-left: 7px
+
+      &-connect
+        size: 7px
+        border-radius: 50%
+        background: #7acea4
+
+      &-pro
+        size: 21px 15px
+        background: resolve('icons/crown.svg')

@@ -1,0 +1,42 @@
+.btn
+  padding: 15px 60px 16px
+  text: #fff 700 center 14px 1.2
+  text-decoration: none
+  font-family: $font
+  border: 0
+  outline: 0
+  cursor: pointer
+  transition: background .1s ease
+  border-radius: 3px
+  user-select: none
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  min-height: 26px
+  background: $main
+  &:hover
+    background: $main-light
+  &:active
+    background: $main-dark
+    transform: scale(.982)
+
+  &--pseudo
+    border: 0
+    outline: 0
+    padding: 0
+    background: transparent
+    cursor: pointer
+    text: 16px
+    font-family: $font
+    &:hover, &.active
+      color: #2a79ff
+    &:active
+      color: #2a79ff
+
+  &--accent
+    background: $accent
+    &:hover
+      background: $accent-light
+    &:active
+      background: $accent-dark
+      transform: scale(.982)

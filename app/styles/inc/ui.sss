@@ -1,0 +1,46 @@
+.col-menu
+  align-items: flex-start
+  flex-direction: column
+  display: flex
+  border: @md-down 1px solid rgb(235, 235, 235)
+  height: @md-down 3rem
+  overflow: @md-down hidden
+  margin-bottom: 1.2rem @sm 1.3rem
+  border-radius: 4px
+  position: relative
+  &:after
+    content: ""
+    display: block @md none
+    position: absolute 0 10px 0 null
+    margin: auto
+    background: svg-load('icons/down.svg')
+    size: size('icons/down.svg')
+  &__item
+    padding: .8rem 1rem @md .75rem 0
+    white-space: nowrap
+    text: 16px left @md 14px
+    width: 100%
+    &.active
+      color: @md-down $text-black
+
+
+.tab
+  box: center
+  border-bottom: 1px solid rgb(235, 235, 235)
+  &__item
+    min-width: unset @sm 167px
+    width: @sm-down 100%
+    text: $text-black center 16px
+    text-decoration: none
+    display: block
+    min-height: 50px
+    line-height: 48px
+    border: 1px solid transparent
+    border-bottom: 0
+    border-radius: 4px 4px 0 0
+    margin-bottom: -1px
+    &.active
+      border-color: rgb(235, 235, 235)
+      background: #fff
+    &:not(.active):hover
+      color: $main

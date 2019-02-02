@@ -1,0 +1,18 @@
+.breadcrumb
+  box: center wrap
+
+  &__item
+    text: #999 13px
+    cursor: default
+
+    &:not(:last-child):after
+      content: '/'
+      display: inline-block
+      margin: 0 .5rem
+
+  &__link
+    text-decoration: none
+    color: #999
+
+    &:hover
+      opacity: .8

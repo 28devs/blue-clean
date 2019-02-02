@@ -1,0 +1,133 @@
+.tingle-modal
+  background-color: rgba(0, 0, 0, .8)
+  user-select: auto
+
+  &--visible
+    ^&-box
+      transform: scale(1) translateY(0)
+      opacity: 1
+    ^&__close
+      opacity: 1
+      transition-delay: .3s
+
+  &-box
+    transition: opacity .5s cubic-bezier(0.22, 0.61, 0.36, 1), transform .5s cubic-bezier(0.22, 0.61, 0.36, 1)
+    transform: scale(.8) translateY(20vh)
+    opacity: 0
+
+  &--overflow
+    padding: 3rem 1rem
+
+  &--widget
+
+    .tingle-modal
+      &__close
+        transform: none @md translateX(calc(298px + 5rem)) @lg translateX(calc(445px + 5rem))
+        top: -15px @lg 65px
+      &-box
+        width: 100% @md 700px @lg 900px
+        &__content
+          background: #fff
+          border-radius: 4px
+          min-height: 800px
+          overflow: hidden
+
+  &__close
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-size: 14px
+    top: 65px
+    right: -13px @md 50%
+    position: absolute @lg fixed
+    opacity: 0
+    transition: opacity .5s cubic-bezier(0.22, 0.61, 0.36, 1)
+    &:hover
+      opacity: .8
+  &__closeLabel
+    display: block
+    color: #d2d2d2
+    margin-top: .5rem
+    display: none @lg block
+
+
+.modal
+  &__header
+    padding: 1rem 1rem @sm 1.5rem 1rem @md 2rem 3rem
+    border-bottom: 1px solid rgba(0,0,0,.16)
+    text: #444 16px @sm 18px @md 24px
+    box: center left
+    flex-direction: column @sm row
+
+    &-back
+      margin-right: .5rem
+      box: center
+      cursor: pointer
+      text: @md-down $main
+      svg
+        margin-right: .6rem @md .5rem
+        width: 7px @md auto
+        g
+          fill: $main @md #444
+
+      &:hover
+        color: $main
+        svg g
+          fill: $main
+
+    &-title
+      box: center
+      text: @sm-down 22px
+      margin-top: @sm-down .5rem
+      svg
+        margin-right: .5rem
+        display: none @sm block
+        path
+          fill: #444
+          transform: scale(1.5)
+          transform-origin: center
+
+  &__content
+    max-width: 560px
+    margin: 1rem auto 3rem @xs 1.5rem auto 6rem
+    padding: 0 1rem
+
+  &__slider
+    height: 240px @md 315px
+    background: #f1f1f1
+
+  &__panel
+    box: vertical left @xs horizontal middle space-between
+    margin-bottom: 1.5rem @xs 2rem
+
+  &__tab
+    margin-bottom: 1.2rem
+
+  &__text
+    p
+      text: 16px 1.4 @sm 18px
+      margin-bottom: 1rem
+    ol
+      text: 16px 1.4 @sm 18px
+      list-style-type: decimal
+      padding-left: 1rem
+      li
+        margin-bottom: .5rem
+    a
+      color: #3697cd
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+
+.widget-modal
+  &__img
+    display: block
+    margin-bottom: @xs-down 1rem
+    max-height: 50px
+    margin-right: 2rem
+  &__btn
+    width: @xs-down 100%
+    min-height: @xs-down 52px
+    text: @xs-down 16px
