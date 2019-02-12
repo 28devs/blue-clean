@@ -1,42 +1,142 @@
 .btn
-  padding: 15px 60px 16px
-  text: #fff 700 center 14px 1.2
+  padding: * 1rem
+  text: #fff center 16px 1.2 0.05rem
   text-decoration: none
   font-family: $font
-  border: 0
+  border: 1px solid transparent
   outline: 0
   cursor: pointer
   transition: background .1s ease
-  border-radius: 3px
+  border-radius: 2px
   user-select: none
   display: inline-flex
   align-items: center
   justify-content: center
-  min-height: 26px
+  min-height: 34px
   background: $main
+  position: relative
+  overflow: hidden
   &:hover
     background: $main-light
   &:active
     background: $main-dark
-    transform: scale(.982)
+    transform: scale(.99)
+  &--outline
+    color: $main
+    &:hover
+      color: $main-light
+    &:active
+      color: $main-dark
 
   &--pseudo
     border: 0
-    outline: 0
-    padding: 0
+    min-height: 28px
+    color: $main
     background: transparent
+    &:hover, &.active
+      color: $main-light
+      background: transparent
+    &:active
+      color: $main-dark
+      background: transparent
+      transform: scale(1)
+
+  &--dark
+    background: $dark
+    &:hover
+      background: $dark-light
+    &:active
+      background: $dark-dark
+    &^&--outline
+      color: $dark
+      &:hover
+        color: $dark-light
+      &:active
+        color: $dark-dark
+
+  &--success
+    background: $success
+    &:hover
+      background: $success-light
+    &:active
+      background: $success-dark
+    &^&--outline
+      color: $success
+      &:hover
+        color: $success-light
+      &:active
+        color: $success-dark
+
+  &--warning
+    background: $warning
+    &:hover
+      background: $warning-light
+    &:active
+      background: $warning-dark
+    &^&--outline
+      color: $warning
+      &:hover
+        color: $warning-light
+      &:active
+        color: $warning-dark
+
+  &--danger
+    background: $danger
+    &:hover
+      background: $danger-light
+    &:active
+      background: $danger-dark
+    &^&--outline
+      color: $danger
+      &:hover
+        color: $danger-light
+      &:active
+        color: $danger-dark
+
+  &--outline
+    background: transparent
+    border-color: currentColor
+    &:hover
+      border-color: currentColor
+      background: transparent
+    &:active
+      border-color: currentColor
+      background: transparent
+
+  &--tiny
+    min-height: 22px
+    text: 14px
+    padding: * .8rem
+
+  &--small
+    min-height: 28px
+    text: 15px
+    padding: * .9rem
+
+  &--big
+    min-height: 38px
+    padding: * 1.2rem
+
+  &--large
+    min-height: 42px
+    text: 17px
+    padding: * 1.3rem
+
+  &--block
+    width: 100%
+    &:active
+      transform: scale(.9977)
+
+  &--reset
+    background: transparent
+    text-decoration: none
+    border: 0
     cursor: pointer
-    text: 16px
+    padding: 0
+    outline: 0
+    text: $text-black 16px 1.2 0.015rem
     font-family: $font
     &:hover, &.active
-      color: #2a79ff
+      color: $link
     &:active
-      color: #2a79ff
-
-  &--accent
-    background: $accent
-    &:hover
-      background: $accent-light
-    &:active
-      background: $accent-dark
-      transform: scale(.982)
+      color: $main-dark

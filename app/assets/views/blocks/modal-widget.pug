@@ -1,28 +1,83 @@
 template#modal-widget
   .modal__header
     .modal__header-back(onclick="modal.close()")
-      include ../../img/icons/back.svg
+      +svg-icon("back")
       | Виджеты
     .modal__header-title
-      include ../../img/icons/devider.svg
+      +svg-icon("devider")
       | UniSender
 
   .modal__slider
+    .glide
+      .glide__track(data-glide-el='track')
+        ul.glide__slides
+          li.glide__slide
+            iframe(src="https://www.youtube.com/embed/yIHsAlhmfvY?rel=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="")
+          li.glide__slide
+            img(src="img/demo/widget/1.png")
+          li.glide__slide
+            img(src="img/demo/widget/2.png")
+          li.glide__slide
+            img(src="img/demo/widget/3.png")
+      .glide__arrows(data-glide-el="controls")
+        button.modal__slider-arrow.modal__slider-arrow--prev(data-glide-dir="<")
+        button.modal__slider-arrow.modal__slider-arrow--next(data-glide-dir=">")
 
   .modal__content
+
     .modal__panel
-      img.widget-modal__img(src="img/demo/logos/1.png" alt="widget")
-      button.widget-modal__btn.btn.btn--accent Подключить
+      .widget-modal__img-wrapper
+        .widget-modal__img-status
+          .icon--connect(data-tooltip="Виджет подключен")
+          div(data-tooltip="Виджет доступен в PRO-пакете")
+            +svg-icon("crown", "color-yellow")
+        img.widget-modal__img(src="img/demo/logos/1.png" alt="widget")
+      button.widget-modal__btn.btn.btn--success.btn--large(onclick="initWidgetModalSlider();") Подключить
 
-    .modal__tab.tab
-      a.tab__item.active(href="#modal-widget-desc") Описание
-      a.tab__item(href="#modal-widget-settings") Настройки
+    .modal__tab.tab.tab--full-width(data-tabs)
+      button.tab__item.active Описание
+      button.tab__item Настройки
 
-    .modal__text#modal-widget-desc
-      p Для того чтобы настроить прием платежей через сервис Яндекс.Касса, выполните следующие действия:
-      ol
-        li Зарегистрируйтесь на сайте <a href="#!">Яндекс.Касса</a>.
-        li На странице регистрации заполните все поля и нажмите «Отправить заявку».
-        li После того как процедура регистрации завершена и все необходимые анкеты заполнены, в <a href="#!">личном кабинете</a> Вам необходимо выбрать пункт «Способ подключения».
-        li Из предложенных способов выберите «HTTP-протокол» и нажмите кнопку «Далее».<br> Внимание! В случае изменения домена (адреса вашего сайта) прием оплаты работать не будет.<br> Если вы планируете изменить домен (подключить внешний), сделайте это до подключения приема оплаты.
-        li Необходимо заполнить все поля в предложенной таблице и нажать «Сохранить».
+    div(data-panes)
+      div.active
+        .info.info--small
+          +svg-icon("attention", "color-warning")
+          .text-small Обратите внимание! В сервисе Яндекс.Деньги установлены ограничения наадиноразового платежа: из идентифицированнооо кошелька — до 250 000 рублей, из анонимного — до 15 000 рублей.
+        .text-content
+          p Для того чтобы настроить прием платежей через сервис Яндекс.Касса, выполните следующие действия:
+          ol
+            li Зарегистрируйтесь на сайте <a href="#!">Яндекс.Касса</a>.
+            li На странице регистрации заполните все поля и нажмите «Отправить заявку».
+            li После того как процедура регистрации завершена и все необходимые анкеты заполнены, в <a href="#!">личном кабинете</a> Вам необходимо выбрать пункт «Способ подключения».
+            li
+              p Из предложенных способов выберите «HTTP-протокол» и нажмите кнопку «Далее».
+              p Внимание! В случае изменения домена (адреса вашего сайта) прием оплаты работать не будет. Если вы планируете изменить домен (подключить внешний), сделайте это до подключения приема оплаты.
+            li Необходимо заполнить все поля в предложенной таблице и нажать «Сохранить».
+
+      div
+        form.form
+          .input
+            .input__label
+            input.input__checkbox(type="checkbox" name="subscriptions1" id="subscriptions1" checked)
+            label.input__checkbox-label(for="subscriptions1") Новые возможности портала
+          .input
+            .input__label
+            input.input__checkbox(type="checkbox" name="subscriptions2" id="subscriptions2" checked)
+            label.input__checkbox-label(for="subscriptions2") Советы по привлечению клииов
+          .input.mb-6
+            .input__label
+            input.input__checkbox(type="checkbox" name="subscriptions3" id="subscriptions3")
+            label.input__checkbox-label(for="subscriptions3") Статистика посещаемости сайта
+
+          .input.input--required.input--row
+            label.input__label(for="shopId") shopId
+            input.input__elem(type="text" name="shopId" id="shopId" placeholder="")
+          .input.input--required.input--row
+            label.input__label(for="scid") scid
+            input.input__elem(type="text" name="scid" id="scid" placeholder="")
+          .input.input--required.input--row
+            label.input__label(for="ShopPassword") ShopPassword
+            input.input__elem(type="text" name="ShopPassword" id="ShopPassword" placeholder="")
+
+    .modal__footer
+      button.btn.btn--outline.btn--dark.btn--big Отключить

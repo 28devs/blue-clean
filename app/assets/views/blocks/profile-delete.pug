@@ -1,0 +1,33 @@
+.cards-spacer
+  .card.tab__content
+    .card__content
+      form.form(method="get" action="#")
+        .form__title Удаление Компании
+        .info.info--small
+          +svg-icon("attention", "color-warning")
+          .text-content.text-content--small
+            p После удаления ваша компания будет удалена из каталога компаний Selo.p1, а сайт компании будет недоступен пользователям.
+        .input.input--required.input--row
+          label.input__label(for="password-delete") Пароль
+          input.input__elem(type="password" name="password-delete" id="password-delete")
+        .form__spacer
+          button.btn.btn--danger(type="submit") Удалить Компанию
+
+  .card.tab__content
+    .card__content
+      form.form(method="get" action="#")
+        .form__title Удаление учетной записи
+        .info.info--small
+          +svg-icon("attention", "color-danger")
+          .text
+            b У вас имеется компания! Опасно, последствия необратимы.
+        .info.info--small
+          +svg-icon("attention", "color-warning")
+          .text-content.text-content--small
+            p Удаление Учетной записи ведет к полному удалению  Кабинета Покупааеля и Кабинет Продавца, включая историю покупок и заказов.
+            p Если вы регулярно покупаете товары и услуги через портал Selo.p1, удаление учетной записи нномендуется.
+        .input.input--required.input--row
+          label.input__label(for="password-delete-1") Пароль
+          input.input__elem(type="password" name="password-delete-1" id="password-delete-1")
+        .form__spacer
+          button.btn.btn--danger(type="submit") Удалить учетную запись

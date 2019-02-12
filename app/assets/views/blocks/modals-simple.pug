@@ -1,0 +1,8 @@
+template#modal-close-welcome-block
+  .modal-simple
+    .modal-simple__content
+      .modal-simple__title Вы действительно желаете закрыть информационный блок?
+      .modal-simple__text Вы выполнили не все рекоммендуемые действия!
+      .modal-simple__btns.btns-spacer
+        .btn.btn--danger(onclick="u('.welcome').remove(); u('.welcome-step__wrapper').first().remove(); modal.close()") Закрыть
+        .btn.btn--success(onclick="modal.close()") Оставить

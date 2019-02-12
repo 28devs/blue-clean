@@ -1,0 +1,271 @@
+extends layouts/layout.pug
+
+block header
+  +header()
+
+block title
+  title Компоненты
+
+block content
+  +pageInfo("Компоненты вёрстки", ["Раздел"])
+
+  .container.cards-spacer
+
+    .card
+      .card__content.text-content
+        .info.info--small.info--warning.info--inline
+          +svg-icon("info")
+          p Теги стилизованы только в обертке классом 
+            mark text-content
+        h1 Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. 
+        h2 Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. 
+        h3 Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. 
+        h4 Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. 
+        h5 Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. 
+        h6 Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. 
+        p Прямо за стойкой, слева от зеркала, стояла маленькая переносная печка с тлеющими углями. Женщина нырнула в какую-то каморку за печкой и вернулась уже с куском мяса, уложенным на бумажку. Отрезав три тоненьких ломтика, она швырнула их на решетку над углями. Поднявшийся запах сводил с ума. Стрелок, однако, стоял с непробиваемо равнодушным видом, как бы и не замечая, что происходит вокруг: чуть сбившийся ритм пианино, заминку в игре картежников, косые взгляды завсегдатаев.
+        p Он знал, <b>что она ему врет</b>, и знал, <i>почему она врет</i>, и <mark>решил</mark> не <ins>настаивать</ins>.
+        p 
+          small Отрезав три тоненьких ломтика, она швырнула их на решетку над углями.
+
+    .card
+      .card__content
+        .h3.mb-6 Tooltips
+        .block
+          .btns-spacer
+            small.mr-2 data-tippy="Tooltip text"
+            .btn.btn--tiny(data-tippy="Tooltip text") default
+          .btns-spacer
+            small.mr-2 data-tippy-size="small|none|large"
+            .btn.btn--tiny(data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте" data-tippy-size="small") small size
+            .btn.btn--tiny(data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационныеепредприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в наа каталоге.") default size
+            .btn.btn--tiny(data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационныеепредприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в наа каталоге." data-tippy-size="large") large size
+          .btns-spacer
+            small.mr-2 data-tippy-placement="left"
+            .btn.btn--tiny(data-tippy="Tooltip text" data-tippy-placement="left") left
+            .btn.btn--tiny(data-tippy="Tooltip text" data-tippy-placement="top") top
+            .btn.btn--tiny(data-tippy="Tooltip text" data-tippy-placement="right") right
+            .btn.btn--tiny(data-tippy="Tooltip text" data-tippy-placement="bottom") bottom
+          .btns-spacer
+            small.mr-2 data-tippy-interactive="true"
+            .btn.btn--tiny(data-tippy="Tooltip text <button class='btn btn--tiny'>Click</button>" data-tippy-interactive="true") interactive
+          .btns-spacer
+            small.mr-2 data-tippy-trigger="click"
+            .btn.btn--tiny(data-tippy="Tooltip text" data-tippy-trigger="click") click
+          .btns-spacer
+            small.mr-2 data-tippy-theme="white"
+            .btn.btn--tiny(data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте" data-tippy-size="small" data-tippy-theme="white") small size
+            .btn.btn--tiny(data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационныеепредприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в наа каталоге." data-tippy-theme="white") default size
+            .btn.btn--tiny(data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационныеепредприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в наа каталоге." data-tippy-theme="white" data-tippy-size="large") large size
+          .devider
+          .btns-spacer
+            small.mr-2 data-tippy-template="#id"
+            .btn.btn--tiny.btn--success(data-tippy-template="tooltip-status-unactive" data-tippy-placement="bottom-start" data-tippy-theme="white" data-tippy-interactive="true" data-tippy-size="large") tooltip-status-unactive
+            .btn.btn--tiny.btn--success(data-tippy-template="tooltip-unpaid-order" data-tippy-placement="bottom-start" data-tippy-theme="white" data-tippy-interactive="true" data-tippy-size="small") tooltip-unpaid-order
+            .btn.btn--tiny.btn--success(data-tippy-template="tooltip-prolong-order" data-tippy-placement="bottom-start" data-tippy-theme="white" data-tippy-interactive="true" data-tippy-size="small") tooltip-prolong-order
+            .btn.btn--tiny.btn--success(data-tippy-template="tooltip-is-pro" data-tippy-placement="right" data-tippy-interactive="true" data-tippy-theme="white" data-tippy-size="small") tooltip-is-pro
+            .btn.btn--tiny.btn--success(data-tippy-template="tooltip-go-pro" data-tippy-placement="right" data-tippy-interactive="true" data-tippy-theme="white" data-tippy-size="small") tooltip-go-pro
+
+        a.link.mt-6(href="https://atomiks.github.io/tippyjs/all-options/") Full tooltips documentation
+
+    .card
+      .card__content
+        .btns-spacer
+          .btn btn
+          .btn.btn--success success
+          .btn.btn--warning warning
+          a.btn.btn--danger(href="#!") danger
+          .btn.btn--dark dark
+          .btn.btn--outline outline
+          .btn.btn--success.btn--outline outline
+          .btn.btn--warning.btn--outline outline
+          .btn.btn--danger.btn--outline outline
+          .btn.btn--dark.btn--outline outline
+        .btns-spacer
+          button.btn--reset reset
+          .btn.btn--pseudo pseudo
+          .btn.btn--tiny tiny
+          .btn.btn--success.btn--small small
+          .btn.btn--warning btn
+          .btn.btn--danger.btn--big big
+          .btn.btn--dark.btn--large large
+        .btns-spacer
+          .btn.btn--tiny.btn--block block
+          .btn.btn--small.btn--block.btn--success block
+          .btn.btn--small.btn--block.btn--warning block
+          .btn.btn--block.btn--danger block
+          .btn.btn--large.btn--block.btn--dark block
+
+    .card
+      .card__content
+        .h3.mb-8 New alert blocks
+        .info Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        .info
+          +svg-icon("info")
+          .text-content
+            h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        .info.info--success
+          +svg-icon("success")
+          .text-content
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?
+        .info.info--warning
+          +svg-icon("warning")
+          .text-content
+            h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?
+        .info.info--danger
+          +svg-icon("danger")
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?
+        .info.info--danger.info--small
+          +svg-icon("danger")
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?
+        .info.info--danger.info--inline
+          +svg-icon("danger")
+          .h2.text-bold.color-danger Lorem ipsum dolor sit
+        .info
+          +svg-icon("info")
+          .text-content
+            h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure? Repellat modi sit delectus, adipisci sunt dolorum optio provident molestiae laudantium! Quos sequi quasi explicabo, dignissimos officiis consectetur velit! Necessitatibus, explicabo hic quidem molestiae ab eveniet magnam animi dolorem odio!
+            .devider
+            .btns-spacer
+              .btn Quidem molestiae
+              .btn.btn--pseudo Commodi
+
+        .info
+          small Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        .info.info--warning.info--small
+          +svg-icon("warning")
+          .text-content
+            h5
+              small Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            small Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?
+        .info.info--warning.info--small
+          +svg-icon("danger")
+          small Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?
+        .info.info--warning.info--unbox
+          +svg-icon("danger")
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?
+        .info.info--success.info--unbox
+          +svg-icon("success")
+          .h2 Lorem ipsum dolor sit consectetur
+        .info.info--unbox
+          +svg-icon("warning")
+          .h1.color-grey Lorem ipsum dolor sit
+        .info.info--success.info--unbox.info--small
+          +svg-icon("success")
+          small.color-success Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae neque minus similique? Commodi amet, nesciunt dolorum voluptates delectus ipsa libero error maiores officia, itaque dicta? Perferendis, harum quaerat.
+        .info.info--small.info--unbox
+          +svg-icon("info")
+          .color-grey Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae neque minus similique?
+        .info.info--danger.info--small.info--unbox
+          +svg-icon("danger")
+          .h3.color-danger Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ducimus.
+        .info.info--small.info--unbox
+          +svg-icon("danger")
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ducimus.
+
+
+    .cards-spacer
+      .alert.alert--warning
+        .alert__icon
+          +svg-icon("attention", "color-warning")
+        .alert__content
+          h6 Обратите внимание!
+          p В сервисе Яндекс.Деньги установлены ограничения наадиноразового платежа: из идентифицированнооо кошелька — до 250 000 рублей, из анонимного — до 15 000 рублей.
+
+
+      .alert.alert--warning.alert--small
+        .alert__icon
+          +svg-icon("attention", "color-warning")
+        .alert__content
+          h6 Обратите внимание!
+          p В сервисе Яндекс.Деньги установлены ограничения наадиноразового платежа: из идентифицированнооо кошелька — до 250 000 рублей, из анонимного — до 15 000 рублей.
+
+      .alert.alert--warning.alert--small
+        .alert__icon
+          +svg-icon("attention", "color-warning")
+        .alert__content
+          p Обратите внимание! После установки галочки e-mail будет «открыто» написан на сайте, и он наверняка попадете в базу адресов тех, кто осуществляет массовые рассылки (спам).
+
+      .alert.alert--warning.alert--small
+        .alert__icon
+          +svg-icon("attention", "color-danger")
+        .alert__content
+          b У вас имеется компания! Опасно,  последствия необратимы.
+
+      .alert.alert--warning
+        .alert__icon
+          +svg-icon("attention", "color-warning")
+        .alert__content
+          .alert__row
+            p Подтвердите E-mail <b>user@mail.ru</b>, и получайте заявки от клиентов через портал.
+            .btns-spacer
+              button.btn Выслать подтверждение
+          .alert__row
+            p Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию
+            .btns-spacer
+              button.btn Добавить товар
+              button.btn Импорт
+
+      .alert
+        .alert__content
+          p Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию
+
+      .alert.alert--warning
+        .alert__content
+          p Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию
+
+      .alert.alert--danger
+        .alert__content
+          p Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию
+
+      .alert.alert--notification.alert--danger
+        .alert__icon
+          +svg-icon("tree", "color-dark", "for-alert")
+        .alert__content
+            p У 24 товаров не указана рубрика. Такие товары не будут выводиться в нашем каталоге пока вы не измените рубрику. 
+            a(href="#!") Смотреть товары
+
+      .alert.alert--notification
+        .alert__icon
+          .badge 3
+          +svg-icon("email", "color-dark", "for-alert")
+        .alert__content
+          .alert__row
+            p 3 новых сообщения 
+            a.btn(href="#!") Перейти к сообщениям
+
+      .alert.alert--notification
+        .alert__icon
+          +svg-icon("cart", "color-dark", "for-alert")
+        .alert__content
+          .alert__row
+            p 29 новых заказов
+            a.btn(href="#!") Перейти к заказам
+
+      .alert.alert--notification
+        .alert__icon
+          +svg-icon("email", "color-dark", "for-alert")
+        .alert__content
+          .alert__row
+            p 3 новых сообщения 
+            a(href="#!") Перейти к сообщениям
+
+      .alert.alert--notification
+        .alert__icon
+          .badge 28
+          +svg-icon("cart", "color-dark", "for-alert")
+        .alert__content
+          p 28 новых заказов
+            a(href="#!") Перейти к заказам
+
+      .alert.alert--notification
+        .alert__icon
+          +svg-icon("download", "color-dark", "for-alert")
+        .alert__content
+            h6 Незавершенный импорт
+            p 29 новых заказов
+            .btns-spacer
+              a.btn(href="#!") Завершить импорт
+              a.btn.btn--dark.btn--outline(href="#!") Отменить импорт

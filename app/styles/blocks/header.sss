@@ -1,7 +1,119 @@
 .header
   background: #fff
-  height: 50px @sm 60px
-  border-bottom: 2px solid #eeeeee
+  height: 46px @md 60px
+  border-bottom: 1px solid #eee
   position: fixed 0 0 null null
-  left: 0 @md 58px @lg 251px
+  left: 0 @md 0 @lg 251px
   z-index: 97
+  box:
+
+  &__btn
+    @extend .btn-reset
+    position: relative
+    min-width: 1rem @sm 3rem @md 4rem
+    padding: 0 1rem
+    &:hover
+      background: #f8f9fc
+    &:active
+      background: #f2f2f3
+    .badge
+      top: 4px @md 5px
+      right: 4px @md 5px
+      transform: none
+
+  &__menu
+    background: #f8f9fc
+    padding: 0 0.75rem @lg 0 1.25rem
+    width: @lg-down 58px
+    min-width: @lg-down 58px
+    &:hover
+      background: #f2f2f3
+    &:active
+      background: #e9e9ea
+
+    &-burger
+      box: vertical middle
+      span
+        size: 32px 3px
+        background: rgba(53, 53, 53, 0.85)
+        margin: 3px 0
+        border-radius: 10px
+        &:nth-child(1)
+          width: 32px
+        &:nth-child(2)
+          width: 20px
+        &:nth-child(3)
+          width: 25px
+      &--circles
+        span
+          width: 27px !important
+          background: rgba(53, 53, 53, 0.8)
+
+  &__menu-right
+    display: block @sm none
+    .icon
+      stroke: #383838
+      size: 8px 26px
+
+  &__to-right
+    margin-left: auto
+    display: none @sm flex
+    position: @sm-down absolute 92px 0 null null
+    min-height: @sm-down 46px
+    background-color: #fff
+    width: @sm-down 205px
+    border: @sm-down 1px solid #eee
+    > ^&__btn
+      width: @sm-down 100%
+      border-right: @sm-down 1px solid #eee
+
+  &__logo
+    box: center
+    margin: 0 auto @sm 0
+    padding: 0 1rem @md 0 1.75rem
+    &-img
+      display: block
+      max-width: 100% @sm 40px @md 100%
+
+  &__account
+    display: none @sm block
+    position: @sm-down absolute 45px 0 null null
+    height: @sm-down 46px
+    width: @sm-down 205px
+    &:hover
+      background: #F3F8FC
+    .dropdown
+      &__select, &__option
+        text: 15px 1 1px @md 16px 1 0.2125rem
+        text-transform: none @sm uppercase
+        height: @sm-down 46px
+      &__select
+        display: none @sm flex
+      &__option
+        padding: 1rem * @sm .7rem * @md 1rem *
+      &__options
+        display: @sm-down block
+
+  &__exit
+    .dropdown__select:after
+      display: none
+    .dropdown__options
+      right: 0
+
+  .icon
+    &--bell
+      size: 20px @md 25px
+    &--email
+      size: 26px 19px @md 31px 20px
+    &--exit
+      size: 16px 23px @md 18px 30px
+
+.aside-is-collapsed
+  .header
+    left: 0 @md 0 @lg 58px
+
+.header-is-right-menu
+  .header__account
+    display: block
+  .header__to-right
+    display: flex

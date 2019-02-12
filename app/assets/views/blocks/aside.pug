@@ -1,2 +1,162 @@
 mixin aside()
   aside.aside
+    .aside__account
+      .aside__account-avatar
+        img.aside__account-avatar-img(src="img/demo/avatar.jpg")
+        .aside__account-avatar-status
+      .aside__account-name(title="ООО \"Very long text Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi.\"") ООО "Very long text Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi."
+      .aside__account-row
+        .aside__account-key Мой сайт:
+        .aside__account-value
+          a.aside__account-link(href="#!" title="very-long-text-vasha-ﬁrmavasha-ﬁrmavasha-ﬁrma.SITE.ru") very-long-text-vasha-ﬁrmavasha-ﬁrmavasha-ﬁrma.SITE.ru
+      .aside__account-row
+        .aside__account-key Пакет:
+        .aside__account-value
+          a.aside__account-link(href="#!") Тестовый
+          +svg-icon("wave-arrow")
+      .aside__account-collapsed
+        a.aside__account-collapsed-link(href="#!") Мой сайт
+        a.aside__account-collapsed-icon(href="#!")
+          +svg-icon("wave-arrow")
+
+    form.aside__search
+      input.aside__search-input(type="text" name="search" autocomplete="off")
+      +svg-icon("search", "aside-search-icon")
+
+    .aside__nav-scroll-wrapper
+      .aside__nav-scroll
+        nav.aside__nav
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("dashboard")
+              | Панель управления
+
+          .aside__nav-item.active
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("cube")
+              | Товары и Услуги
+            .aside__nav-sub
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Управление товарами
+                  .aside__nav-tip 28
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Импорт
+                  .aside__nav-sub-icon
+                    +svg-icon("clock")
+                    +svg-icon("attention")
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Экспорт
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Акции
+                  .aside__nav-tip 2
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Массовое изменение цен
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Общее описание товаров
+
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("basket")
+              | Заказы и сообщения
+            .aside__nav-sub
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Управление товарами длинная строка
+                  .aside__nav-tip 999
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Управление товарами длинная строка
+                  .aside__nav-sub-icon
+                    +svg-icon("clock")
+                    +svg-icon("attention")
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Управление товарами длинная строка
+                  .aside__nav-tip 999
+                  .aside__nav-sub-icon
+                    +svg-icon("clock")
+                    +svg-icon("attention")
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Любые иконки
+                  .aside__nav-sub-icon
+                    +svg-icon("settings")
+                    +svg-icon("crown", "color-warning")
+                    +svg-icon("dialog")
+                    +svg-icon("shield", "color-success")
+                    +svg-icon("star", "color-warning")
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Общее описание товаров управление товарами
+
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("dialog")
+              | Отзывы
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("users")
+              | Клиенты
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("up")
+              | Selo.Контекст
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("graph")
+              | Вебмастер и SEO
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("star")
+              | Бонусы и рейтинг
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("cols")
+              | Информация на сайте
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("widget")
+              | Включенные виджеты
+          .aside__nav-item
+            a.aside__nav-link(href="#!")
+              .aside__nav-icon
+                +svg-icon("package")
+              | Selo.Магазин
+            .aside__nav-sub.aside__nav-sub--color
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Виджеты
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Дизайны
+              .aside__nav-sub-item
+                a.aside__nav-sub-link(href="#!") Услуги
+
+    nav.aside__nav-fixed
+      .aside__nav-item
+        a.aside__nav-link(href="#!")
+          .aside__nav-icon
+            +svg-icon("pulse")
+          | Статистика
+      .aside__nav-item
+        a.aside__nav-link(href="#!")
+          .aside__nav-icon
+            +svg-icon("settings")
+          | Настройки
+        .aside__nav-sub
+          .aside__nav-sub-item
+            a.aside__nav-sub-link(href="#!") Управление товарами
+          .aside__nav-sub-item
+            a.aside__nav-sub-link(href="#!") Управление товарами
+          .aside__nav-sub-item
+            a.aside__nav-sub-link(href="#!") Управление товарами
+          .aside__nav-sub-item
+            a.aside__nav-sub-link(href="#!") Управление товарами
+      .aside__nav-item
+        a.aside__nav-link(href="#!")
+          .aside__nav-icon
+            +svg-icon("crown")
+          | Тарифы и счета

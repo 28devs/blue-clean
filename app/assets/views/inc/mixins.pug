@@ -1,0 +1,18 @@
+mixin svg-icon(name, mod)
+  svg(class="icon icon--" + name + [ mod ? " icon--" + mod : ""])
+    use(xlink:href="#" + name)
+
+
+mixin pageInfo(title, links)
+  section.page-info
+    .page-info__title= title
+
+    if links
+      .breadcrumb
+        .breadcrumb__item
+          a.breadcrumb__link(href="#!")
+            +svg-icon("dashboard")
+
+        each link in links
+          .breadcrumb__item
+            a.breadcrumb__link(href="#!")= link

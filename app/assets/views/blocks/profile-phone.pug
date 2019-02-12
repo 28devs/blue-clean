@@ -1,0 +1,27 @@
+.cards-spacer
+  .card.tab__content
+    .card__content
+      form.form(method="get" action="#")
+        .form__title Телефон
+        .info.info--small
+          +svg-icon("attention", "color-warning")
+          .text-content.text-content--small
+            p Здесь Вы можете настроить отправку SMS-уведомлений о появлении новв заказов и сообщений на Ваш мобильныытелефон.
+            p Помните, если у вас есть непринятые заказы или ннообщения, вы не будете получать SMS-уведомления о появлении 
+            p Новых заказов и сообщений. В течение нескольких минут вы получите SMS-сообщение на свой мобильнн Введите сюда 6 цифр 
+            p Проверочного кода из этого SMS. Если вы не получили от нас SMS, вы можете сделать повторный запрос через 2 минн
+        .input.input--required.input--row
+          label.input__label(for="phone-sms") Номер телефона
+          input.input__elem(type="text" name="phone-sms" id="phone-sms")
+        .input.form__spacer
+          button.btn(type="submit") Cохранить
+
+        .alert.alert--warning
+          p Проверочный код отправлен в SMS.  Для подтверждения номера телефона  введите код из SMS в поле ниже:
+
+        .input.input--required.input--row
+          label.input__label(for="phone-code") Проверочный код
+          input.input__elem(type="text" name="phone-code" id="phone-code")
+        .input.form__spacer.btns-spacer
+          button.btn.btn--success(type="submit") Подтвердить
+          .btn.btn--success.btn--outline Повторно отправить код (118)

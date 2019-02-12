@@ -1,0 +1,42 @@
+template(id="tooltip-status-unactive")
+  .space-saver.text-content
+    p Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационные документы предприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в нашем каталоге. У компаний, не предоставивших документы на проверку, в карточке товара отображается уведомление, предостерегающее покупателей от внесения предоплаты при покупке товара.
+    .h5.my-3.text-center
+      a(href="#!") Подробно о процедуре проверки документов
+    p.color-grey
+      small Эта мера вызвана участившимися обращениями покупателей, ставшими жертвами недобросовестных компаний, размещающихся на нашем портале.
+    hr
+    .items-justify-around
+      .info.info--unbox.info--small.info--inline
+        +svg-icon("shield-fill", "color-success")
+        b.color-success Подтвержденная
+      .info.info--unbox.info--small.info--inline
+        +svg-icon("danger-fill", "color-danger")
+        b.color-danger Не подтвержденная
+    p.color-grey.text-small.text-center.mt-2
+      small Обозначение статуса проверки компании в личном кабинете
+
+template(id="tooltip-unpaid-order")
+  .space-saver.text-content
+    p.mb-1.color-grey Создан заказ:
+    h5.color-main.text-bold <a href="#!">Пакет "Старт"</a>
+    .btn.btn--small.btn-block.mt-1 Оплатить заказ
+
+template(id="tooltip-prolong-order")
+  .space-saver.text-content
+    p.color-grey.mb-0 Ваш пакет:
+    h5.color-main.text-bold.mb-2 <a href="#!">"Старт"</a>
+    p.color-grey.mb-0  Действует до:
+    p.color-main.text-bold.mb-0 23.10.2019 
+      .color-grey осталось 291 день
+    .btn.btn--small.btn-block.mt-1 Продлить пакет
+
+template(id="tooltip-is-pro")
+  .text-content
+    h6.color-grey У вас 
+      b.color-main <a href="#!">ПРО-пакет</a>
+
+template(id="tooltip-go-pro")
+  .text-content
+    h6.color-grey Перейти на 
+      b.color-main <a href="#!">ПРО-пакет</a>

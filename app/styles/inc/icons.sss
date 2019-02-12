@@ -1,0 +1,108 @@
+#sprite-symbol-svg
+  display: none
+
+.icon
+  display: inline-block
+  size: 2rem
+  fill: #9da6ab
+
+  &--crown
+    size: 21px 15px
+  &--devider
+    size: 21px 15px
+  &--dashboard
+    size: 15px 13px
+  &--attention
+    size: 46px 40px
+  &--shield
+    size: 24px 25px
+  &--tree
+    size: 26px 40px
+  &--download
+    size: 28px 28px
+  &--email
+    size: 31px 20px
+  &--burger
+    size: 32px 21px
+  &--bell
+    size: 26px
+  &--exit
+    size: 19px 32px
+  &--dialog
+    size: 19px 32px
+    fill: #9da6ab
+  &--connect
+    size: 15px
+    &:after
+      content: ""
+      size: 7px
+      display: block
+      border-radius: 50%
+      background: $success
+      margin: 4px
+  &--help
+    background: svg-load("icons/help.svg" stroke: #7a7f82) no-repeat center / 12px
+    size: 12px
+  &--info
+    size: 46px
+
+  &--color-gray
+    fill: #9da6ab
+  &--color-success
+    fill: $success
+  &--color-warning
+    fill: #fabe5e
+  &--color-dark
+    fill: #606363
+  &--color-black
+    fill: #383838
+  &--color-danger
+    fill: #f9605f
+  &--color-yellow
+    fill: #ffda2d
+  &--color-yellow-light
+    fill: #FFCE8A
+
+.icon-color
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: center
+
+  &--widgets
+    background-image: svg-load("icons/widgets.svg")
+    &-size
+      width: 205px
+      max-width: 100%
+      padding-top: 62.44%
+
+  &--design
+    background-image: svg-load("icons/design.svg")
+    &-size
+      width: 74px
+      max-width: 100%
+      padding-top: 75.68%
+
+  &--rocket
+    background-image: svg-load("icons/rocket.svg")
+    &-size
+      width: 35px
+      max-width: 100%
+      padding-top: 162.86%
+
+  &--user-info
+    background-image: svg-load("icons/user-info.svg")
+    &-size
+      width: 105px
+      max-width: 100%
+      padding-top: 78%
+
+  &--to-up
+    background-image: svg-load("icons/to-up.svg")
+  &--credit-card
+    background-image: svg-load("icons/credit-card.svg")
+  &--layers
+    background-image: svg-load("icons/layers.svg")
+  &--car
+    background-image: svg-load("icons/car.svg")
+  &--mail-dog
+    background-image: svg-load("icons/email.svg" fill: #717272)

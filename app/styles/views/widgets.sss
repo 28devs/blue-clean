@@ -9,9 +9,14 @@
       border: 1px solid #f7f7f7
       border-right: 0
       border-bottom: 0
+      height: 100%
 
     &-menu
       margin-right: @md 2rem
+      display: @md-down none
+      &-mobile
+        display: @md none
+        margin-bottom: 1rem
 
   &__item
     box: vertical center middle
@@ -27,35 +32,41 @@
     overflow: hidden
     padding: * .5rem @lg * 1rem
     padding-bottom: .5rem @sm .8rem @md 1rem
-
+    user-select: none
     &:hover
       background: #f4f8fc
-      border-color: #f4f8fc
-      box-shadow: 0 0 0 1px #f4f8fc, 0 64px 64px 0 rgba(0,0,0,.02), 0 32px 32px 0 rgba(0,0,0,.02), 0 16px 16px 0 rgba(0,0,0,.02), 0 8px 8px 0 rgba(0,0,0,.02), 0 4px 4px 0 rgba(0,0,0,.02), 0 2px 2px 0 rgba(0,0,0,.02)
+      box-shadow: $shadow-1
       z-index: 4
-
+    &:active
+      transform: scale(.995)
+      box-shadow: none
     &-img
       margin-top: auto
       max-width: calc(100% - 3rem)
       max-height: 32px @xs 40px @sm 50px @md 60px @xl unset
-
     &-text
       text: #727272 13px 1.2 center @sm 14px
       margin-top: auto
-
     &-status
       position: absolute 0 0 null null
       box: center
       padding: 7px
-
       > *
         margin-left: 7px
+        max-height: 20px
+    .icon--plus
+      stroke: #00a245
+      stroke-width: 4px
+      transform: scale(1.5) @xs scale(2)
 
-      &-connect
-        size: 7px
-        border-radius: 50%
-        background: #7acea4
-
-      &-pro
-        size: 21px 15px
-        background: resolve('icons/crown.svg')
+    &--simple-tiny
+      height: 60px @sm 60px
+      padding: 0 !important
+      ^&-img
+        max-height: 30px @sm 30px
+        max-width: 40px
+        margin-bottom: auto
+      .icon--plus
+        size: 1.7rem
+        stroke-width: 4px
+        stroke: $success

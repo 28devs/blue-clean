@@ -1,0 +1,51 @@
+extends layouts/layout.pug
+
+block header
+  +header()
+
+block title
+  title Уведомления
+
+block content
+  +pageInfo("Уведомления", ["Уведомления"])
+
+  .container
+
+    .page-msg-block
+      .info.info--unbox
+        +svg-icon("exclamation", "color-yellow-light")
+        p Список сообщений содержит переписку с клиентами, которые отправили запрос с вашего сайта
+
+    .tab__scroller
+      .tab.tab--full-width(data-tabs)
+        button.tab__item.active Уведомления системы
+          small.color-grey.ml-2 2
+        button.tab__item Новости Selo.ru
+          small.color-grey.ml-2 28
+
+    div(data-panes)
+      div.active
+        .card.tab__content
+          .card__content
+            .devider-list
+              .info
+                .text-content
+                  p Подтвердите E-mail <b>XXXX@mail.ru</b>, и получайте заявки от клиентов через портал.
+                small.color-grey.ml-auto 31.05.2018
+              .info
+                .text-content
+                  p Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию
+                small.color-grey.ml-auto 31.05.2018
+              .info
+                +svg-icon("download", "color-dark")
+                .text-content
+                  p
+                    b Незавершенный импорт<br>
+                    | Вы загрузили файл для импорта, но не выбрали рубрики и не завершили импорт.
+                  .btns-spacer
+                    .btn Завершить импорт
+                    .btn.btn--dark.btn--outline Отменить импорт
+                .text-small.color-grey.ml-auto 31.05.2018
+      div
+        .card.tab__content
+          .card__content

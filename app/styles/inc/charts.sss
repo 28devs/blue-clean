@@ -1,0 +1,97 @@
+$chart-blue: #7cb5ec
+$chart-dark: #434348
+$chart-green: #90ed7d
+
+.pie-chart
+  position: relative
+  width:     260px @sm 150px @md 200px @lg 220px @xl 300px @2xl 400px
+  min-width: 260px @sm 150px @md 200px @lg 220px @xl 300px @2xl 400px
+  height:    130px @sm 75px  @md 100px @lg 110px @xl 150px @2xl 200px
+  overflow: hidden
+
+  &__arc,
+  &:before,
+  &:after
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    transform-origin: 50% 0%
+    left: 0
+    box-sizing: border-box
+
+  &:before
+    border: 70px solid #eff1f6
+    border-bottom: none
+    top: 0
+    z-index: 1
+    border-radius: 300px 300px 0 0
+
+  &:after
+    border-radius: 300px 300px 0 0
+    background: white
+    bottom: 0
+    right: 20%
+    left: 20%
+    top: 40%
+    margin: auto
+    z-index: 8
+    width: auto
+    height: auto
+
+  &__arc
+    border-width: 70px
+    border-style: solid
+    border-top: none
+    border-radius: 0 0 300px 300px
+    top: 100%
+    z-index: 2
+    &--blue
+      border-color: $chart-blue
+    &--dark
+      border-color: $chart-dark
+    &--green
+      border-color: $chart-green
+
+  &__score
+    font-size: 1rem
+    display: block
+    width: 45%
+    text: #333 16px 1.1 @sm 12px @md 14px @lg 16px @xl 18px
+    text-align: center
+    margin-top: 60px
+    bottom: 3px @lg 1rem
+    z-index: 9
+    margin: auto
+    position: absolute null 0 null 0
+
+  &__legend
+    margin-left: 0 @sm 1rem
+    margin-top: 1rem @sm 0
+    text: 14px @md 15px @lg 16px
+    &-item
+      box: center space-between
+      &:not(:last-child)
+        margin-bottom: .3rem @md .5rem
+    &-color
+      size: 18px
+      border-radius: 4px
+      margin-right: 1rem
+      &--blue
+        background: $chart-blue
+      &--dark
+        background: $chart-dark
+      &--green
+        background: $chart-green
+    &-name
+      margin-right: auto
+    span
+      width: 50px
+      text-align: right
+      &:last-child
+        width: 60px
+        color: #a9a9aa
+
+@for $i from 1 to 100
+  .pie-chart__arc[data-value="$i"]
+    transform: rotate(calc($i * 1.8deg))

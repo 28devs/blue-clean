@@ -1,2 +1,38 @@
 mixin header()
   header.header
+    button.header__btn.header__menu
+      .header__menu-burger
+        span
+        span
+        span
+
+    a.header__logo.header__btn(href="#!")
+      img.header__logo-img(src="img/logo.png" alt="logo")
+
+    button.header__btn.header__menu-right
+      .header__menu-burger.header__menu-burger--circles
+        span
+        span
+        span
+
+    .dropdown.header__account
+      .dropdown__select.header__btn
+        | КАБИНЕТ КОМПАНИИ
+      .dropdown__options
+        a.dropdown__option(href="#!") КАБИНЕТ ПОКУПАТЕЛЯ
+
+    .header__to-right
+      button.header__btn
+        .badge 28
+        +svg-icon("bell", "color-dark")
+
+      button.header__btn
+        .badge 1
+        +svg-icon("email", "color-dark")
+
+      .dropdown.header__exit
+        button.dropdown__select.header__btn
+          +svg-icon("exit", "color-dark")
+        .dropdown__options
+          a.dropdown__option(href="#!") Выход
+          a.dropdown__option(href="#!") Выход (все устройства)

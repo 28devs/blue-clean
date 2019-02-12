@@ -1,13 +1,19 @@
 .account
-
   &__container
-    padding-top: 50px @sm 60px
-    padding-bottom: 58px @sm 68px
+    padding-top: 46px @md 60px
+    // padding-bottom: 58px @sm 68px
     padding-left: 0 @md 58px @lg 251px
 
     &-main
       box: vertical
       width: 100%
+      min-height: calc(100vh - 46px) @md calc(100vh - 60px)
 
   &__main
     display: block
+    padding-bottom: 1.5rem @md 2rem
+
+.aside-is-collapsed
+  .account
+    &__container
+      padding-left: 0 @md 58px @lg 58px

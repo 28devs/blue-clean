@@ -1,0 +1,32 @@
+.fixed-btns
+  position: fixed
+  right: 0 @sm 1rem
+  bottom: 0 @sm 2rem
+  left: @sm-down 0
+  z-index: 99
+  box: horizontal @sm vertical
+  background: #34353a @sm transparent
+  .btn
+    size: @sm 50px
+    padding: 0
+    border-radius: 50%
+    margin-bottom: 9px
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.02)
+    font-size: @sm 0
+    border-radius: @sm-down 0
+    width: @sm-down 100%
+    font-size: 10px @xs 11px
+    background: @sm-down transparent
+    text-align: @sm-down left
+    padding-left: @sm-down 9px !important
+    margin-bottom: @sm-down 0 !important
+    opacity: @sm-down .7
+    .icon
+      fill: #fff
+      size: 26px 22px
+      position: @sm absolute
+      margin-right: @sm-down 8px
+    &--bag-report
+      order: 3
+      display: @sm-down flex
+      flex-direction: @sm-down row

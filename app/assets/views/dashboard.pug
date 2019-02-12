@@ -1,0 +1,223 @@
+extends layouts/layout.pug
+
+block header
+  +header()
+
+block title
+  title Панель управления
+
+block content
+  +pageInfo("Панель управления")
+
+  .container
+    .welcome
+      .welcome__title Добро пожаловать в Кабинет
+      .welcome__text Осталось несколько шагов для привлечения первых покупателей
+      button.welcome__tour
+        span Экспресс тур
+
+    .welcome-step__wrapper
+      button.welcome-step__close
+        +svg-icon("cross")
+      a.welcome-step(href="#!")
+        .welcome-step__icon
+          .icon-color.icon-color--mail-dog
+        .welcome-step__text Подтвердить Email
+      a.welcome-step.welcome-step--completed(href="#!")
+        .welcome-step__icon
+          .icon-color.icon-color--to-up
+        .welcome-step__text Добавить Товар / Услугу
+      a.welcome-step.welcome-step--completed(href="#!")
+        .welcome-step__icon
+          .icon-color.icon-color--credit-card
+        .welcome-step__text Настроить оплату
+      a.welcome-step(href="#!")
+        .welcome-step__icon
+          .icon-color.icon-color--car
+        .welcome-step__text Настроить доставку
+      a.welcome-step.welcome-step--completed(href="#!")
+        .welcome-step__icon
+          .icon-color.icon-color--layers
+        .welcome-step__text Выбрать дизайн
+
+
+    .welcome-step__wrapper.welcome-step--stats
+      a.welcome-step(href="#!")
+        .welcome-step__header
+          +svg-icon("basket")
+          | Заказы
+        .welcome-step__number
+          .welcome-step__number-left 3
+          .welcome-step__number-devider /
+          .welcome-step__number-right 193
+        .welcome-step__footer
+      a.welcome-step(href="#!")
+        .welcome-step__header
+          +svg-icon("email")
+          | Сообщения
+        .welcome-step__number
+          .welcome-step__number-left 28
+          .welcome-step__number-devider /
+          .welcome-step__number-right 28
+        .welcome-step__footer
+      a.welcome-step(href="#!")
+        .welcome-step__header
+          +svg-icon("cube")
+          | Товары
+        .welcome-step__number
+          .welcome-step__number-left 3000
+          .welcome-step__number-devider /
+          .welcome-step__number-right 19300
+        .welcome-step__footer
+      a.welcome-step(href="#!")
+        .welcome-step__header
+          +svg-icon("arrow-options")
+          | Варианты
+        .welcome-step__number
+          .welcome-step__number-left 300
+          .welcome-step__number-devider /
+          .welcome-step__number-right 1930
+        .welcome-step__footer
+      a.welcome-step(href="#!")
+        .welcome-step__header
+          +svg-icon("dialog")
+          | Otzivi
+        .welcome-step__number
+          .welcome-step__number-left 2
+          .welcome-step__number-devider /
+          .welcome-step__number-right 21
+        .welcome-step__footer
+
+
+    .alerts-spacer
+      .alert.alert--notification
+        .alert__icon
+          +svg-icon("email", "color-dark", "for-alert")
+        .alert__content
+          .alert__row
+            p 3 новых сообщения 
+            a(href="#!") Перейти к сообщениям
+
+      .alert.alert--notification
+        .alert__icon
+          .badge 28
+          +svg-icon("cart", "color-dark", "for-alert")
+        .alert__content
+          p 28 новых заказов
+            a(href="#!") Перейти к заказам
+
+      .alert.alert--notification
+        .alert__icon
+          +svg-icon("download", "color-dark", "for-alert")
+        .alert__content
+            h6 Незавершенный импорт
+            p 29 новых заказов
+            .btns-spacer
+              a.btn(href="#!") Завершить импорт
+              a.btn.btn--dark.btn--outline(href="#!") Отменить импорт
+
+
+
+
+    .dashboard
+      .dashboard__wrapper
+        .dashboard__chart
+          .card
+            a.card__light-btn.btn.btn--pseudo.btn--tiny Cменить тариф
+              +svg-icon("wave-arrow")
+
+            .card__content-light
+              .dashboard__chart-container
+                .pie-chart
+                  .pie-chart__arc.pie-chart__arc--green(data-value='100')
+                  .pie-chart__arc.pie-chart__arc--dark(data-value='45')
+                  .pie-chart__arc.pie-chart__arc--blue(data-value='24')
+                  span.pie-chart__score Лимит позиций
+
+                .pie-chart__legend
+                  .pie-chart__legend-item
+                    .pie-chart__legend-color.pie-chart__legend-color--blue
+                    .pie-chart__legend-name Товары
+                    span(data-percent) 45%
+                    span(data-count) 1239
+                  .pie-chart__legend-item
+                    .pie-chart__legend-color.pie-chart__legend-color--dark
+                    .pie-chart__legend-name Услуги
+                    span(data-percent) 5%
+                    span(data-count) 128
+                  .pie-chart__legend-item
+                    .pie-chart__legend-color.pie-chart__legend-color--green
+                    .pie-chart__legend-name Доступно
+                    span(data-percent) 50%
+                    span(data-count) 1503
+              .card__footer
+                .btns-spacer.btns-spacer--to-right
+                  button.btn.btn--small Импорт
+                  button.btn.btn--small Добавить товар
+
+        .dashboard__stats
+          .card
+            .card__content-light
+              .card__title Статистика посещений
+              .table.table--dashboard-stats
+                .table__row
+                  .table__col
+                  .table__col Сегодня
+                  .table__col Вчера
+                  .table__col 7 дней
+                  .table__col 30 дней
+                  .table__col Все время
+                .table__row
+                  .table__col Показов страниц
+                  .table__col 5
+                  .table__col 4 <span class="color-success">+3</span>
+                  .table__col 13
+                  .table__col 1 <span class="color-danger">-3</span>
+                  .table__col 577
+                .table__row
+                  .table__col Посетителей
+                  .table__col 1
+                  .table__col 1
+                  .table__col 5 <span class="color-success">+5</span>
+                  .table__col 1
+                  .table__col 92 <span class="color-success">+85</span>
+              .card__footer
+                .btns-spacer.btns-spacer--to-right
+                  a.btn.btn--pseudo(href="#!") Подробнее
+
+      .dashboard__widgets
+        .card
+          .card__content-light.card__title Подключенные виджеты
+
+          section.widgets__list-wrapper
+            each i in [13,14,15,16,17,13,14,15,16,17]
+              article.widgets__item.widgets__item--simple-tiny
+                .widgets__item-status
+                  .icon--connect(data-tooltip="Виджет подключен")
+                img.widgets__item-img(src="img/demo/logos/"+i+".png" alt="widget")
+
+            button.btn--reset.widgets__item.widgets__item--simple-tiny
+              +svg-icon("plus")
+
+          .card__content-light
+            .btns-spacer.btns-spacer--to-right
+              a.btn.btn--pseudo(href="#!") Все виджиты
+
+    .selo-shop
+      .selo-shop__title <b>SELO.</b>МАГАЗИН
+      .selo-shop__row
+        a.selo-shop__item(href="#!")
+          .selo-shop__item-icon.icon-color.icon-color--widgets
+          .selo-shop__item-wrapper
+            .selo-shop__item-title Виджеты
+            .selo-shop__item-text Приложения для сайта
+        a.selo-shop__item(href="#!")
+          .selo-shop__item-icon.icon-color.icon-color--design
+          .selo-shop__item-wrapper
+            .selo-shop__item-title Дизайны
+            .selo-shop__item-text Платные и Бесплатные шаблоны
+        a.selo-shop__item(href="#!")
+          .selo-shop__item-icon.icon-color.icon-color--rocket
+          .selo-shop__item-wrapper
+            .selo-shop__item-title Услуги
+            .selo-shop__item-text Продвижение, наполнение, позиционирование

@@ -1,0 +1,49 @@
+.tippy
+  &-tooltip
+    max-width: 390px
+    border-radius: 2px
+    text: left
+    padding: .4rem .8rem @lg .7rem 1.3rem
+    font-size: inherit
+    line-height: inherit
+    box-shadow: 0px 15px 60px -3px rgba(0, 0, 0, 0.2), 0px -2px 30px -3px rgba(0, 0, 0, 0.1)
+    border-radius: 2px
+    &[data-size="large"]
+      max-width: 596px
+      padding: .7rem 1.3rem .7rem @lg .9rem 1.9rem 1.1rem
+    &[data-size="small"]
+      max-width: 200px
+      padding: .45rem @lg .5rem .7rem .6rem
+
+$tippy-white: #f9fafc
+
+.tippy-popper
+  &[x-placement^=top] .tippy-tooltip.white-theme .tippy-arrow
+    border-top: 8px solid $tippy-white
+    border-right: 8px solid transparent
+    border-left: 8px solid transparent
+  &[x-placement^=bottom] .tippy-tooltip.white-theme .tippy-arrow
+    border-bottom: 8px solid $tippy-white
+    border-right: 8px solid transparent
+    border-left: 8px solid transparent
+  &[x-placement^=left] .tippy-tooltip.white-theme .tippy-arrow
+    border-left: 8px solid $tippy-white
+    border-top: 8px solid transparent
+    border-bottom: 8px solid transparent
+  &[x-placement^=right] .tippy-tooltip.white-theme .tippy-arrow
+    border-right: 8px solid $tippy-white
+    border-top: 8px solid transparent
+    border-bottom: 8px solid transparent
+
+.tippy-tooltip.white-theme
+  color: #222
+  background-color: $tippy-white
+  .tippy-backdrop
+    background-color: $tippy-white
+  .tippy-roundarrow
+    fill: $tippy-white
+  &[data-animatefill]
+    background-color: transparent
+
+// .tippy-tooltip.white-theme
+//   box-shadow: rgba(0, 0, 0, 0.33) 0px 0px 0px 2600px

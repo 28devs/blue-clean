@@ -1,0 +1,43 @@
+extends layouts/layout.pug
+
+block header
+  +header()
+
+block title
+  title Профиль
+
+block content
+  +pageInfo("Панель управления", ["Настройки", "Профиль"])
+
+  .container
+    .page-user-info
+      .page-user-info__title Редактирование персональных данных
+      .page-user-info__wrapper
+        .page-user-info__text
+          p Обратите внимание, что данные, указанный здесь, используются:
+          ol
+            li Логин и пароль - для авторизации
+            li Главный суперадмин, может создавать Филиалы и Менеджеров
+            li Удаление Компании
+        .page-user-info__img
+          .icon-color.icon-color--user-info.icon-color--user-info-size
+
+    .tab__scroller
+      .tab.tab--full-width(data-tabs)
+        button.tab__item.active Личная информация
+        button.tab__item Логин и пароль
+        button.tab__item Подписки
+        button.tab__item Уведомления в SMS
+        button.tab__item Удаление
+
+    div(data-panes)
+      div
+        include blocks/profile-personal-info.pug
+      div
+        include blocks/profile-login-and-password.pug
+      div
+        include blocks/profile-subscriptions.pug
+      div
+        include blocks/profile-phone.pug
+      div
+        include blocks/profile-delete.pug

@@ -1,4 +1,352 @@
+.aside__nav-item:hover
+  .icon
+    &--dashboard
+      fill: #4fabfd
+    &--cube
+      fill: #e96a2a
+    &--basket
+      fill: #fff
+    &--dialog
+      fill: #fff
+    &--users
+      fill: #fff
+    &--up
+      fill: #face3a
+    &--graph
+      fill: #f55a48
+    &--star
+      fill: #face3a
+    &--cols
+      fill: #67acdc
+    &--widget
+      fill: #f55a48
+    &--package
+      fill: #67acdc
+    &--pulse
+      fill: #fff
+    &--settings
+      fill: #fff
+
+.aside__nav-link
+  .icon
+    size: 20px
+    fill: #e5e9e1
+    &--dashboard
+      size: 21px 16px
+    &--cube
+      size: 17px 18px
+    &--basket
+      size: 18px 15px
+    &--dialog
+      size: 18px 19px
+    &--users
+      size: 25px 19px
+    &--up
+      size: 14px 17px
+    &--graph
+      size: 25px 13px
+    &--star
+      size: 19px
+    &--cols
+      size: 18px 17px
+    &--widget
+      size: 17px
+    &--package
+      size: 17px 21px
+    &--pulse
+      size: 27px 26px
+    &--settings
+      size: 21px
+    &--crown
+      size: 21px 14px
+      fill: #f4de85
+
 .aside
-  width: 0 @md 58px @lg 251px
-  background: #2f3035
-  position: fixed 0 null 0 0
+  width: 251px @md 251px @lg 251px
+  background: #34353a
+  position: fixed null null 0 0
+  top: 46px @md 60px @lg 0
+  bottom: 0 @md 0 @lg 0
+  z-index: 998
+  transform: translateX(-100%) @md none
+  transition: transform .2s ease
+  will-change: transform
+  overflow: hidden
+  &:hover
+    overflow: visible
+
+  &--mobile-show
+    transform: translateX(0)
+
+  &__mobile-cover
+    position: fixed 0 0 0 0
+    background: rgba(0, 0, 0, 0.65)
+    z-index: 96
+
+  &__account
+    background: #2f3035
+    text: #fff 15px
+    padding: .75rem 1rem .3rem
+    &-avatar
+      size: 56px
+      border-radius: 50%
+      background: #f8f9fc
+      margin: 0 auto
+      position: relative
+      &:before
+        content: ""
+        display: block
+        position: absolute 0 0 0 0
+        margin: auto
+        background: resolve("logo.png") no-repeat center / 36px
+        size: 100% 36px
+        z-index: 1
+        filter: grayscale(1)
+      &-img
+        display: block
+        position: absolute 0 null null 0
+        width: calc(100% + 2px)
+        margin: -1px
+        border-radius: 50%
+        z-index: 2
+      &-status
+        position: absolute null -6px 0 null
+        z-index: 3
+        size: 22px
+        background: svg-load("icons/attention-white.svg") no-repeat center / contain
+        filter: drop-shadow(0 0 1px rgba(0, 0, 0, .1))
+        &.active
+          background: svg-load("icons/shield-white.svg") no-repeat center / contain
+    &-name
+      text-align: center
+      margin: .65rem 0 .45rem
+      cursor: default
+      @extend .truncate
+    &-row
+      text: 14px
+      box:
+      &:not(:last-child)
+        margin-bottom: .45rem
+    &-key
+      color: #e5e9e1
+      width: 33%
+      cursor: default
+    &-value
+      width: 67%
+      position: relative
+      @extend .truncate
+      .icon
+        size: 19px 18px
+        position: absolute
+        margin-left: 10px
+        top: 3px
+        fill: #fff
+    &-link
+      text: #e0f6cc
+      text-decoration: none
+      border-bottom: 1px dashed #87878a
+      outline: 0
+      height: 20px
+      &:hover
+        border-color: currentColor
+    &-collapsed
+      display: none
+      &-link
+        text: #e5e9e1 12px center
+        text-decoration: none
+        white-space: nowrap
+        display: block
+        margin: 12px 0 10px
+        &:hover
+          color: #fff
+      &-icon
+        box: center middle
+        height: 34px
+        &:hover
+          background: #232427
+          color: #fff
+        .icon
+          size: 20px
+          fill: #fff
+
+
+  &__search
+    background: #2f3035
+    // border-top: 1px #34353a solid
+    position: relative
+    height: 36px
+    &:hover
+      border-color: #2f3035
+    &-input
+      size: 100%
+      padding: 0 1rem
+      outline: 0
+      border: 0
+      background: transparent
+      text: #e5e9e1 14px
+      font-family: $font
+      &:hover, &:focus
+        background: #232427
+    .icon
+      position: absolute 0 16px 0 null
+      size: 16px
+      margin: auto
+      fill: #737a84
+      pointer-events: none
+
+  &__nav
+    // padding: .5rem 0
+    overflow: auto
+    width: 251px @md 251px @lg 251px
+    &-scroll
+      overflow: hidden auto
+      width: 300px
+      position: absolute 0 0 0 0
+      &-wrapper
+        position: relative
+        width: 251px
+        margin-bottom: 200px
+        overflow: hidden
+    &-fixed
+      position: absolute null null 0 0
+      background: #2f3035
+      width: 251px @md 251px @lg 251px
+      padding: .5rem 0
+    &-item
+      width: 100%
+      position: relative
+      &.active
+        background: #2e2f33
+        ^^&-link
+          // background: #232427
+          box-shadow: inset 4px 0 0 #fff
+        ^^&-sub
+          &:after
+            transform: unset
+          &-item
+            display: block
+    &-link
+      text: #e5e9e1 14px 1.1
+      height: 34px
+      text-decoration: none
+      box: center
+      outline: 0
+      white-space: nowrap
+      &:hover
+        background: #232427
+        color: #fff
+    &-icon
+      width: 58px
+      box: middle
+    &-tip
+      text: #757575 12px 1
+      margin-left: .5rem
+      margin-right: auto
+    &-sub
+      background-color: #2e2f33
+      &:after
+        content: ""
+        display: block
+        background-image: svg-load("icons/down.svg" fill: #c6c6c6)
+        background-size: contain
+        size: 9px 6px
+        position: absolute 14px 16px null null
+        pointer-events: none
+        transform: rotate(-90deg)
+      &-item
+        display: none
+        &:last-child
+          margin-bottom: .5rem
+      &-link
+        text: #e5e9e1 14px 1.1
+        text-decoration: none
+        box: center space-between
+        padding: .4rem *
+        padding-left: 58px
+        padding-right: .5rem
+        outline: 0
+        &:hover, &:focus
+          background: #232427
+          color: #fff
+        .icon
+          size: 13px
+          margin-left: .25rem
+          &--attention
+            fill: #fbac2e
+          &--clock
+            fill: #e8f9f0
+      &-icon
+        box: center
+
+      &--color
+        background: transparent
+        & ^&-item
+          display: block
+        &:after
+          display: none
+        & ^&-item
+          &:nth-child(1) ^^&-link:first-letter
+            color: #FF5C3A
+          &:nth-child(2) ^^&-link:first-letter
+            color: #5891E0
+          &:nth-child(3) ^^&-link:first-letter
+            color: #FFAF12
+        & ^&-link
+          display: block
+          &:before
+            content: "-"
+            margin-right: 7px
+            display: flex
+            float: left
+
+
+  &--collapsed
+    width: 251px @md 58px @lg 58px
+    bottom: 0 @md 0 @lg 0
+    ^&__account
+      padding: * 0
+      padding-bottom: 0
+      &-avatar
+        size: 40px
+        &-status
+          size: 17px
+          right: -4px
+      &-name, &-row
+        display: none
+      &-collapsed
+        display: block
+    ^&__search
+      display: none
+    ^&__nav
+      padding: .5rem 0
+      overflow: auto
+      &-fixed
+        width: 58px @md 58px @lg 58px
+        // padding: 0
+        .aside__nav-sub
+          display: none
+      &-link
+        width: 251px @md 251px @lg 251px
+      &-icon
+        margin-right: 1rem
+        min-width: 58px
+      &-sub
+        position: absolute null 0 null 0
+        margin-left: 58px
+        &--color
+          display: none
+        &:after
+          display: none
+        &-link
+          padding-left: 1rem
+      &-item
+        width: 58px @md 58px @lg 58px
+        overflow: hidden
+        &:hover
+          z-index: 9
+          width: 251px @md 251px @lg 251px
+          overflow: visible
+          .aside__nav-link
+            background: #2e2f33
+          .aside__nav-sub-item
+            display: block

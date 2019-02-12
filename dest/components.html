@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Компоненты</title>
+    <link href="styles/libs.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <div id="sprite-symbol-svg"><?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 9 17" id="arrow-options" xmlns="http://www.w3.org/2000/svg"><defs><path id="aaa" d="M813.056 217.268l-3.183 3.216.97.96 1.497-1.515v4.92l-4.09 4.09v4.33h1.364v-3.766l4.09-4.09v-5.553l1.567 1.583.97-.959z"/></defs><use transform="translate(-808 -217)" xlink:href="#aaa"/></symbol><symbol viewBox="0 0 3.8 7" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M2.9 3.5L0 6.6l.4.4 3.4-3.5L.4 0 0 .5z"/></symbol><symbol viewBox="0 0 46 40" id="attention" xmlns="http://www.w3.org/2000/svg"><defs><path id="aca" d="M331.102 615.578c1.132 1.962-.286 4.422-2.553 4.422H289.45c-2.266 0-3.685-2.46-2.552-4.422l19.55-33.866c1.133-1.963 3.97-1.963 5.104 0zm-22.075-23.438a2.241 2.241 0 0 0-2.238 2.294l.359 12.862a1.873 1.873 0 0 0 1.87 1.814 1.867 1.867 0 0 0 1.871-1.814l.368-12.862a2.234 2.234 0 0 0-2.23-2.294zM309 615.402a2.323 2.323 0 0 0 2.321-2.32 2.324 2.324 0 0 0-2.321-2.323 2.324 2.324 0 0 0-2.322 2.322 2.324 2.324 0 0 0 2.322 2.321z"/></defs><use transform="translate(-286 -580)" xlink:href="#aca"/></symbol><symbol viewBox="0 0 24 24" id="back" xmlns="http://www.w3.org/2000/svg"><path d="M9.707 7.707a1 1 0 1 0-1.414-1.414L2.586 12l5.707 5.707a1 1 0 1 0 1.414-1.414L5.414 12l4.293-4.293z"/><path d="M20 11H5a1 1 0 0 0 0 2h15a1 1 0 0 0 0-2z"/></symbol><symbol viewBox="0 0 18 15" id="basket" xmlns="http://www.w3.org/2000/svg"><defs><path id="aea" d="M35.122 467.23l-.92-.447L36.015 463H24v-1h13.622z"/><path id="aeb" d="M33.233 470.517a1.423 1.423 0 1 1 0 2.846 1.423 1.423 0 0 1 0-2.846z"/><path id="aec" d="M33.233 471.235a.705.705 0 1 1 0 1.41.705.705 0 0 1 0-1.41z"/><path id="aed" d="M28.08 470.517a1.423 1.423 0 1 1 0 2.846 1.423 1.423 0 0 1 0-2.846z"/><path id="aee" d="M28.08 471.235a.705.705 0 1 1 .001 1.41.705.705 0 0 1 0-1.41z"/><path id="aef" d="M20.573 459a.492.492 0 0 0-.493.493.487.487 0 0 0 .493.507H22v-1z"/><path id="aeg" d="M34.915 467h-8.247l-3.613-7.69a.526.526 0 0 0-.478-.31H22v1h.239l3.614 7.69c.084.184.267.31.478.31h8.519s.594.251.594.583c0 .332-.594.417-.594.417h-8.86c-.284 0-.5.229-.5.5 0 .284.229.5.5.5h8.925c.826 0 1.5-.674 1.5-1.5s-.674-1.5-1.5-1.5z"/></defs><use xlink:href="#aea" transform="translate(-20 -459)"/><use xlink:href="#aeb" transform="translate(-20 -459)"/><use xlink:href="#aec" transform="translate(-20 -459)"/><use xlink:href="#aed" transform="translate(-20 -459)"/><use xlink:href="#aee" transform="translate(-20 -459)"/><use xlink:href="#aef" transform="translate(-20 -459)"/><use xlink:href="#aeg" transform="translate(-20 -459)"/></symbol><symbol viewBox="0 0 25.2 25.2" id="bell" xmlns="http://www.w3.org/2000/svg"><path d="M24.8 18c-2.9-2.9-3.4-4.4-3.4-9 0-4.4-3.1-8.3-7.5-8.9C8.5-.7 3.8 3.5 3.8 8.8c0 2.6-.1 3.5-.4 4.7C3 15 2.1 16.4.4 18c-.8.8-.2 2.2.9 2.2h7l-.1.6c0 2.4 2 4.4 4.4 4.4s4.4-2 4.4-4.4v-.6h7c1.1 0 1.6-1.4.8-2.2zm-12.2 5.9c-1.7 0-3.2-1.4-3.2-3.1l.1-.6h6.2l.1.6c0 1.7-1.5 3.1-3.2 3.1zM1.3 19.2C5 15.4 5 13 5 9.3c0-3.6 2.4-6.9 6-7.6 4.9-1 9.2 2.7 9.2 7.4 0 3.8 0 6.3 3.8 10.1H1.3z"/></symbol><symbol viewBox="0 0 28.53 29.29" id="bug" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M4.77 1.45a7 7 0 0 1 5.33 5.66 7 7 0 0 0-1.87 4.82V12H20.3a.43.43 0 0 0 0-.05 7 7 0 0 0-1.87-4.82 7 7 0 0 1 5.33-5.66A.73.73 0 0 0 23.5 0a8.63 8.63 0 0 0-6.33 6.08 5.5 5.5 0 0 0-2.9-.83 5.56 5.56 0 0 0-2.91.83A8.63 8.63 0 0 0 5 0a.73.73 0 0 0-.26 1.44z"/><path d="M28.49 8.55A1 1 0 0 0 26.63 8s-1.2 3.85-1.45 4.68l-3.2.89c0-.18-.07-.35-.11-.52H6.66c0 .17-.07.34-.11.52l-3.19-.89L1.91 8a1 1 0 0 0-1.22-.67A1 1 0 0 0 0 8.55l1.77 5.69 4.46 1.24c0 .42-.06.83-.06 1.26s0 1 .08 1.54l-4.46 2-1.35 7.86a1 1 0 0 0 .79 1.14 1 1 0 0 0 1.13-.8s1.06-6 1.22-6.85l3-1.36c1.1 4.5 4.12 7.73 7.69 7.73s6.59-3.26 7.65-7.76l3 1.36c.15.88 1.21 6.85 1.21 6.85a1 1 0 1 0 1.92-.34l-1.35-7.84-4.45-2c.05-.5.08-1 .08-1.54s0-.84-.06-1.26l4.46-1.24z"/></g></symbol><symbol viewBox="0 0 32 21" id="burger" xmlns="http://www.w3.org/2000/svg"><defs><path id="aha" d="M275.588 22.852h28.824a1.175 1.175 0 1 0 0-2.352h-28.824a1.177 1.177 0 0 0 0 2.352z"/><path id="ahb" d="M275.125 31.677h17.48c.394 0 .714-.527.714-1.177s-.32-1.177-.714-1.177h-17.48c-.394 0-.713.528-.713 1.177 0 .65.319 1.177.713 1.177z"/><path id="ahc" d="M275.318 40.5h22.218c.5 0 .906-.527.906-1.177 0-.649-.406-1.176-.906-1.176h-22.218c-.5 0-.906.527-.906 1.176 0 .65.406 1.177.906 1.177z"/></defs><use xlink:href="#aha" transform="translate(-274 -20)"/><use xlink:href="#ahb" transform="translate(-274 -20)"/><use xlink:href="#ahc" transform="translate(-274 -20)"/></symbol><symbol viewBox="0 0 25 24" id="cart" xmlns="http://www.w3.org/2000/svg"><defs><path id="aia" d="M73.48 572.687c-.101-.107-.204-.214-.41-.214H53.589l-.513-2.783c0-.215-.307-.428-.512-.428h-3.077c-.307 0-.512.213-.512.535 0 .321.205.535.512.535h2.666l2.46 13.06c.309 1.713 1.847 2.998 3.488 2.998h11.792c.308 0 .513-.215.513-.536 0-.32-.205-.535-.513-.535h-11.69c-.82 0-1.64-.428-2.05-1.178l14.97-2.14c.206 0 .41-.215.41-.429l2.052-8.564s0-.214-.103-.32zm-2.87 8.35l-14.971 2.034-1.846-9.635h18.56z"/><path id="aib" d="M57.69 587.46c-1.436 0-2.563 1.178-2.563 2.677 0 1.498 1.126 2.676 2.562 2.676 1.437 0 2.564-1.178 2.564-2.676 0-1.5-1.127-2.677-2.563-2.677zm0 4.282c-.82 0-1.538-.75-1.538-1.605 0-.857.718-1.606 1.538-1.606.82 0 1.538.749 1.538 1.606 0 .856-.719 1.605-1.539 1.605z"/><path id="aic" d="M67.944 587.46c-1.436 0-2.563 1.178-2.563 2.677 0 1.498 1.127 2.676 2.563 2.676 1.436 0 2.563-1.178 2.563-2.676 0-1.5-1.127-2.677-2.563-2.677zm0 4.282c-.82 0-1.538-.75-1.538-1.605 0-.857.718-1.606 1.538-1.606.82 0 1.538.749 1.538 1.606 0 .856-.718 1.605-1.538 1.605z"/><path id="aid" d="M65.61 574.875l-.893.893-3.327 3.327-1.686-1.686-.23-.23-.452.453-.452.452 2.82 2.82 5.125-5.124z"/></defs><use xlink:href="#aia" transform="translate(-49 -569)"/><use xlink:href="#aib" transform="translate(-49 -569)"/><use xlink:href="#aic" transform="translate(-49 -569)"/><use xlink:href="#aid" transform="translate(-49 -569)"/></symbol><symbol viewBox="0 0 12 12" id="clock" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M6 0a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm.26 11.47v-1.05a.26.26 0 1 0-.52 0v1.05A5.47 5.47 0 0 1 .53 6.26h1.05a.26.26 0 1 0 0-.52h-1A5.47 5.47 0 0 1 5.74.53v1.05a.26.26 0 0 0 .52 0v-1a5.47 5.47 0 0 1 5.21 5.21h-1.05a.26.26 0 1 0 0 .52h1.05a5.47 5.47 0 0 1-5.21 5.16z"/><path d="M8.72 8.39l-2.46-2.5V3.3a.26.26 0 0 0-.52 0V6a.25.25 0 0 0 .08.18l2.53 2.57a.25.25 0 0 0 .36 0 .27.27 0 0 0 .01-.36z"/></g></symbol><symbol viewBox="0 0 18 9" id="cols" xmlns="http://www.w3.org/2000/svg"><defs><path id="aka" d="M31.22 652h-6.44c-.43 0-.78-.044-.78-.098v-.804c0-.054.35-.098.78-.098h6.44c.431 0 .78.044.78.098v.804c0 .054-.349.098-.78.098z"/><path id="akb" d="M41.22 652h-6.44c-.43 0-.78-.044-.78-.098v-.804c0-.054.35-.098.78-.098h6.44c.431 0 .78.044.78.098v.804c0 .054-.349.098-.78.098z"/><path id="akc" d="M31.22 648h-6.44c-.43 0-.78-.044-.78-.098v-.804c0-.054.35-.098.78-.098h6.44c.431 0 .78.044.78.098v.804c0 .054-.349.098-.78.098z"/><path id="akd" d="M41.22 648h-6.44c-.43 0-.78-.044-.78-.098v-.804c0-.054.35-.098.78-.098h6.44c.431 0 .78.044.78.098v.804c0 .054-.349.098-.78.098z"/><path id="ake" d="M31.22 656h-6.44c-.43 0-.78-.044-.78-.098v-.804c0-.054.35-.098.78-.098h6.44c.431 0 .78.044.78.098v.804c0 .054-.349.098-.78.098z"/><path id="akf" d="M41.22 656h-6.44c-.43 0-.78-.044-.78-.098v-.804c0-.054.35-.098.78-.098h6.44c.431 0 .78.044.78.098v.804c0 .054-.349.098-.78.098z"/></defs><use xlink:href="#aka" transform="translate(-24 -647)"/><use xlink:href="#akb" transform="translate(-24 -647)"/><use xlink:href="#akc" transform="translate(-24 -647)"/><use xlink:href="#akd" transform="translate(-24 -647)"/><use xlink:href="#ake" transform="translate(-24 -647)"/><use xlink:href="#akf" transform="translate(-24 -647)"/></symbol><symbol viewBox="0 0 24 24" id="cross" xmlns="http://www.w3.org/2000/svg"><path d="M10.586 12l-6.293 6.293a1 1 0 0 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 0 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 1 0-1.414-1.414L12 10.586 5.707 4.293a1 1 0 0 0-1.414 1.414L10.586 12z"/></symbol><symbol viewBox="0 0 21 14" id="crown" xmlns="http://www.w3.org/2000/svg"><defs><path id="ama" d="M748.554 620.871a.562.562 0 0 1-.015.167l-1.234 4.934a.561.561 0 0 1-.541.425l-7.401.037h-7.406a.56.56 0 0 1-.543-.425l-1.234-4.954a.545.545 0 0 1-.015-.17 1.179 1.179 0 0 1-.825-1.124 1.18 1.18 0 0 1 2.356 0c0 .366-.167.693-.43.91l1.544 1.555c.39.394.933.62 1.486.62.656 0 1.28-.312 1.674-.833l2.538-3.363a1.178 1.178 0 1 1 2.01-.833c0 .315-.125.602-.327.812l.003.003 2.519 3.372a2.104 2.104 0 0 0 1.678.841 2.08 2.08 0 0 0 1.48-.613l1.554-1.554a1.178 1.178 0 0 1 .739-2.094 1.177 1.177 0 0 1 .39 2.287zm-1.37 7.32a.56.56 0 0 0-.56-.56H732.12a.56.56 0 0 0-.561.56v1.346c0 .31.25.56.56.56h14.505a.56.56 0 0 0 .56-.56z"/></defs><use transform="translate(-729 -616)" xlink:href="#ama"/></symbol><symbol viewBox="0 0 17 18" id="cube" xmlns="http://www.w3.org/2000/svg"><defs><path id="ana" d="M625.193 220.345a.908.908 0 0 1 .518.816v8.22c0 .348-.2.664-.513.815l-7.34 3.513a.901.901 0 0 1-.781 0l-7.28-3.515a.902.902 0 0 1-.51-.813v-8.22c0-.343.2-.663.515-.814l7.28-3.462a.903.903 0 0 1 .772 0zm-8.626 5.031l-5.474-2.75v6.19l5.474 2.643zm6.173-4.192l-5.27-2.485-5.226 2.485 5.227 2.627zm1.166 1.436l-5.535 2.758v6.085l5.535-2.65z"/></defs><use transform="translate(-609 -216)" xlink:href="#ana"/></symbol><symbol viewBox="0 0 32 32" id="danger" xmlns="http://www.w3.org/2000/svg"><path d="M16 3.219l-.875 1.5-12 20.781-.844 1.5H29.72l-.844-1.5-12-20.781zm0 4L26.25 25H5.75zM15 14v6h2v-6zm0 7v2h2v-2z"/></symbol><symbol viewBox="0 0 24 24" id="danger-fill" xmlns="http://www.w3.org/2000/svg"><path d="M23 20L12 1.7 1 20h22zm-10-2h-2v-2h2v2zm0-4h-2V9h2v5z"/></symbol><symbol viewBox="0 0 16 13" id="dashboard" xmlns="http://www.w3.org/2000/svg"><defs><path id="aqa" d="M312.504 110.974c-.876.597-5.274 3.602-5.747 4.075a1.76 1.76 0 0 0 0 2.486c.343.343.793.514 1.243.514.45 0 .9-.17 1.243-.514.473-.473 3.478-4.87 4.076-5.747a.588.588 0 0 0-.815-.814zm-4.918 5.732a.587.587 0 0 1 0-.828c.183-.182 1.432-1.072 2.968-2.14-1.068 1.536-1.958 2.784-2.14 2.968a.588.588 0 0 1-.828 0zm7.914-.414a7.439 7.439 0 0 0-.661-3.083.586.586 0 1 0-1.068.482c.37.82.557 1.694.557 2.601a6.277 6.277 0 0 1-.81 3.082l-.754-.359a.586.586 0 0 0-.504 1.058l1.23.586a.587.587 0 0 0 .74-.204 7.47 7.47 0 0 0 1.27-4.163zm-11.514 2.995a.586.586 0 0 0-.784-.27l-.723.353a6.303 6.303 0 0 1-.395-5.325l.829.397a.585.585 0 0 0 .781-.274.585.585 0 0 0-.274-.782l-.82-.392a6.34 6.34 0 0 1 4.814-3.004v.882a.586.586 0 0 0 1.172 0v-.882a6.278 6.278 0 0 1 2.015.53.585.585 0 1 0 .482-1.067 7.454 7.454 0 0 0-3.083-.66c-2.003 0-3.887.78-5.303 2.195a7.45 7.45 0 0 0-2.197 5.304c0 1.48.44 2.92 1.27 4.163a.585.585 0 0 0 .745.201l1.2-.586a.585.585 0 0 0 .27-.783z"/></defs><use transform="translate(-300 -108)" xlink:href="#aqa"/></symbol><symbol viewBox="0 0 26 26" id="devider" xmlns="http://www.w3.org/2000/svg"><path d="M11.414 3.586L8.586 6.414 15.172 13l-6.586 6.586 2.828 2.828L20.828 13z"/></symbol><symbol viewBox="0 0 16 16.07" id="dialog" xmlns="http://www.w3.org/2000/svg"><path d="M4.8 16.07a.69.69 0 0 1-.24-.07.67.67 0 0 1-.39-.63v-2A4.92 4.92 0 0 1 0 8.52V4.9A4.91 4.91 0 0 1 4.9 0H11a5 5 0 0 1 5 4.92v3.63a5 5 0 0 1-5 4.95h-.5a6.71 6.71 0 0 0-4.74 1.89l-.5.48a.66.66 0 0 1-.46.2zM4.9 1A3.91 3.91 0 0 0 1 4.9v3.62a3.86 3.86 0 0 0 3.67 3.93h.5v2.12a7.71 7.71 0 0 1 5.33-2.07h.5a4 4 0 0 0 4-3.95V4.92A4 4 0 0 0 11 1z"/><circle cx="3.91" cy="7.3" r=".96"/><circle cx="7.74" cy="7.3" r=".96"/><circle cx="11.57" cy="7.3" r=".96"/></symbol><symbol viewBox="0 0 8 5" id="down" xmlns="http://www.w3.org/2000/svg"><defs><path id="ata" d="M667.428 34.046a.243.243 0 0 0 .072-.175.246.246 0 0 0-.072-.176.252.252 0 0 0-.351 0L664 36.774l-3.077-3.08a.25.25 0 0 0-.35 0 .248.248 0 0 0 0 .352l3.252 3.259a.25.25 0 0 0 .35 0z"/></defs><use xlink:href="#ata" transform="translate(-660 -33)"/></symbol><symbol viewBox="0 0 27.69 30" id="download" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M24.4 7.58h-5.28a.66.66 0 1 0 0 1.32h5.28a2 2 0 0 1 2 2v15.8a2 2 0 0 1-2 2H3.3a2 2 0 0 1-2-2V10.88a2 2 0 0 1 2-2h5.93a.66.66 0 0 0 0-1.32H3.3A3.31 3.31 0 0 0 0 10.88V26.7A3.3 3.3 0 0 0 3.3 30h21.1a3.3 3.3 0 0 0 3.29-3.3V10.88a3.31 3.31 0 0 0-3.29-3.3z"/><path d="M7.55 13.48a.65.65 0 0 0 0 .93l5.83 5.83a.69.69 0 0 0 .47.2.66.66 0 0 0 .46-.2l5.83-5.83a.65.65 0 0 0-.92-.93l-4.71 4.72V.66a.66.66 0 0 0-1.32 0V18.2l-4.72-4.72a.64.64 0 0 0-.92 0z"/></g></symbol><symbol viewBox="0 0 31 20" id="email" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M25.11 15a.52.52 0 0 1-.34-.12L19 10a.42.42 0 0 1 0-.64.52.52 0 0 1 .71 0l5.75 4.9a.43.43 0 0 1 0 .65.52.52 0 0 1-.35.09zM5.9 15a.54.54 0 0 1-.36-.14.43.43 0 0 1 0-.65l5.75-4.9a.53.53 0 0 1 .71 0 .42.42 0 0 1 0 .69l-5.76 4.89a.5.5 0 0 1-.34.11z"/><path d="M28.5 20h-26A2.4 2.4 0 0 1 0 17.73V2.27A2.4 2.4 0 0 1 2.5 0h26A2.4 2.4 0 0 1 31 2.27v15.46A2.4 2.4 0 0 1 28.5 20zM1 2.27v15.46a1.43 1.43 0 0 0 1.5 1.36h26a1.43 1.43 0 0 0 1.5-1.36V2.27A1.43 1.43 0 0 0 28.5.91h-26A1.43 1.43 0 0 0 1 2.27z"/><path d="M15.51 11.83a3 3 0 0 1-1.84-.6L.83 1.05a.42.42 0 0 1 0-.64.55.55 0 0 1 .71 0l12.79 10.14a2 2 0 0 0 2.35 0L29.51.38a.53.53 0 0 1 .7 0 .44.44 0 0 1 0 .65l-12.87 10.2a3 3 0 0 1-1.83.6z"/></g></symbol><symbol viewBox="0 0 15.45 49" id="exclamation" xmlns="http://www.w3.org/2000/svg"><path d="M12.18 36.75H3.27a2.13 2.13 0 0 0-1.56.66A2.14 2.14 0 0 0 1.05 39v7.79a2.14 2.14 0 0 0 .66 1.57 2.13 2.13 0 0 0 1.56.64h8.91a2.25 2.25 0 0 0 2.23-2.23V39a2.25 2.25 0 0 0-2.23-2.23zM14.84.66A2.08 2.08 0 0 0 13.29 0H2.16A2.1 2.1 0 0 0 .61.66 2.06 2.06 0 0 0 0 2.23L1 29a2.23 2.23 0 0 0 .71 1.57 2.19 2.19 0 0 0 1.58.66h8.91A2.34 2.34 0 0 0 14.48 29l1-26.72a2 2 0 0 0-.64-1.62z"/></symbol><symbol viewBox="0 0 18 30.2" id="exit" xmlns="http://www.w3.org/2000/svg"><path d="M5.2 0v1.3H0v26.6h1.9V3.3h3.3v27L18 27.9V2.3L5.2 0zm2.4 16.2c-.4 0-.8-.5-.8-1 0-.6.3-1 .8-1 .4 0 .8.5.8 1-.1.5-.4 1-.8 1z" class="axst0"/></symbol><symbol viewBox="0 0 25 13" id="graph" xmlns="http://www.w3.org/2000/svg"><defs><path id="aya" d="M26.65 587.878l-3.892 3.89a.375.375 0 0 0 0 .534.376.376 0 0 0 .534 0l3.891-3.891a.377.377 0 1 0-.534-.533z"/><path id="ayb" d="M30.19 587.878a.377.377 0 1 0-.534.533l3.274 5.273a.376.376 0 0 0 .533 0 .377.377 0 0 0 0-.534z"/><path id="ayc" d="M41.872 586.751a.377.377 0 0 0-.533 0l-5.772 6.772a.377.377 0 1 0 .533.534l5.772-6.773a.377.377 0 0 0 0-.533z"/><path id="ayd" d="M21.898 591.653a1.886 1.886 0 1 1 0 3.773 1.886 1.886 0 0 1 0-3.773z"/><path id="aye" d="M28.42 585.132a1.886 1.886 0 1 1 0 3.772 1.886 1.886 0 0 1 0-3.772z"/><path id="ayf" d="M43.114 584a1.886 1.886 0 1 1 0 3.772 1.886 1.886 0 0 1 0-3.772z"/><path id="ayg" d="M34.324 593.035a1.886 1.886 0 1 1 0 3.773 1.886 1.886 0 0 1 0-3.773z"/></defs><use xlink:href="#aya" transform="translate(-20 -584)"/><use xlink:href="#ayb" transform="translate(-20 -584)"/><use xlink:href="#ayc" transform="translate(-20 -584)"/><use xlink:href="#ayd" transform="translate(-20 -584)"/><use xlink:href="#aye" transform="translate(-20 -584)"/><use xlink:href="#ayf" transform="translate(-20 -584)"/><use xlink:href="#ayg" transform="translate(-20 -584)"/></symbol><symbol viewBox="0 0 11.25 11.25" id="help" xmlns="http://www.w3.org/2000/svg"><g stroke-miterlimit="10" stroke-width=".25"><circle cx="5.63" cy="5.63" r="5.5"/><path d="M5.97 8.16v.47M4.34 3.28A1.62 1.62 0 0 1 6 1.66a1.63 1.63 0 0 1 .86 3A2 2 0 0 0 6 6.34V7"/></g></symbol><symbol viewBox="0 0 32 32" id="info" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13 13-5.832 13-13S23.168 3 16 3zm0 2c6.086 0 11 4.914 11 11s-4.914 11-11 11S5 22.086 5 16 9.914 5 16 5zm-1 5v2h2v-2zm0 4v8h2v-8z"/></symbol><symbol viewBox="0 0 7 25" id="menu" xmlns="http://www.w3.org/2000/svg"><defs><path id="bba" d="M918.25 42a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0z"/><path id="bbb" d="M918.25 33.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0z"/><path id="bbc" d="M918.25 25a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0z"/></defs><use fill-opacity="0" stroke-miterlimit="50" xlink:href="#bba" transform="translate(-917 -21)"/><use fill-opacity="0" stroke-miterlimit="50" xlink:href="#bbb" transform="translate(-917 -21)"/><use fill-opacity="0" stroke-miterlimit="50" xlink:href="#bbc" transform="translate(-917 -21)"/></symbol><symbol viewBox="0 0 15 18" id="package" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M14.49.29a.31.31 0 0 0-.3-.29H.91A.31.31 0 0 0 .6.29L0 17.68a.36.36 0 0 0 .08.23.31.31 0 0 0 .22.09h14.49a.31.31 0 0 0 .22-.09.27.27 0 0 0 .08-.23zM.62 17.4L1.19.6H13.9l.57 16.8"/><path d="M9.81 1.21a.91.91 0 1 0 .91.9.9.9 0 0 0-.91-.9zm0 1.2a.29.29 0 0 1-.3-.3.3.3 0 0 1 .6 0 .29.29 0 0 1-.3.3zm-4.53-1.2a.91.91 0 0 0 0 1.79.91.91 0 1 0 0-1.81zm0 1.2a.3.3 0 0 1-.3-.3.31.31 0 0 1 .3-.3.3.3 0 0 1 .3.3.29.29 0 0 1-.3.3z"/><path d="M9.81 2.11a.3.3 0 0 0-.3.3.22.22 0 0 0 0 .12v1.54a2 2 0 1 1-3.93 0V2.41a.3.3 0 0 0-.3-.3.31.31 0 0 0-.3.3v1.66a2.57 2.57 0 1 0 5.13 0V2.41a.3.3 0 0 0-.3-.3z"/></g></symbol><symbol viewBox="0 0 28.53 28.58" id="phone" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 17.7a2.79 2.79 0 0 0-2-.93 2.9 2.9 0 0 0-2.06.93l-1.9 1.89-.47-.24a5.57 5.57 0 0 1-.6-.32 20.82 20.82 0 0 1-5-4.52 12.26 12.26 0 0 1-1.63-2.57c.5-.45 1-.92 1.4-1.37l.51-.52a2.77 2.77 0 0 0 0-4.17L9.16 4.23c-.19-.18-.38-.38-.56-.57-.36-.37-.74-.76-1.13-1.12a2.87 2.87 0 0 0-2-.89 2.94 2.94 0 0 0-2.05.89l-2 2.07A4.43 4.43 0 0 0 0 7.42a10.59 10.59 0 0 0 .8 4.48 25.58 25.58 0 0 0 4.61 7.69A28.23 28.23 0 0 0 14.86 27a14.64 14.64 0 0 0 5.31 1.57h.38A4.58 4.58 0 0 0 24 27.08c.32-.38.68-.72 1.06-1.09s.52-.51.78-.78a3 3 0 0 0 .91-2.09 2.92 2.92 0 0 0-.88-2.12zm2.16 6.35c-.23.26-.47.48-.73.74A14.83 14.83 0 0 0 22.82 26a2.87 2.87 0 0 1-2.27 1h-.27a13.38 13.38 0 0 1-4.71-1.41 26.85 26.85 0 0 1-8.9-7 24.41 24.41 0 0 1-4.34-7.23 8.63 8.63 0 0 1-.68-3.77 2.72 2.72 0 0 1 .84-1.79l2.05-2.09a1.37 1.37 0 0 1 .92-.43 1.29 1.29 0 0 1 .88.42c.37.35.72.7 1.08 1.08l.58.61L9.66 7a1.15 1.15 0 0 1 0 1.87l-.52.52c-.5.52-1 1-1.51 1.47a1.23 1.23 0 0 0-.31 1.37v.06a13.54 13.54 0 0 0 2 3.17 22 22 0 0 0 5.35 4.87 6.94 6.94 0 0 0 .75.41c.21.11.42.21.59.32h.07a1.36 1.36 0 0 0 .6.15 1.27 1.27 0 0 0 .92-.42l2.06-2.06a1.39 1.39 0 0 1 .91-.45 1.21 1.21 0 0 1 .87.44l3.33 3.32a1.19 1.19 0 0 1-.05 2.01zM15.42 6.8a7.77 7.77 0 0 1 6.32 6.32.8.8 0 0 0 .8.67h.14a.81.81 0 0 0 .67-.94 9.38 9.38 0 0 0-7.64-7.65.83.83 0 0 0-1 .67.82.82 0 0 0 .71.93zm13.1 5.81A15.45 15.45 0 0 0 15.93 0a.82.82 0 0 0-.93.68.83.83 0 0 0 .67.94 13.79 13.79 0 0 1 11.25 11.25.81.81 0 0 0 .8.68h.14a.78.78 0 0 0 .66-.94z" data-name="Layer 2"/></symbol><symbol viewBox="0 0 41.55 41.55" id="plus" xmlns="http://www.w3.org/2000/svg"><path d="M20.78 2v37.55M2 20.78h37.55" data-name="Layer 2"/></symbol><symbol viewBox="0 0 24 23" id="pulse" xmlns="http://www.w3.org/2000/svg"><defs><path id="bfa" d="M45.539 857.984h-5.54a.468.468 0 0 0-.427.3l-1.3 3.252-1.053-4.563a.46.46 0 1 0-.9.007l-2.587 11.826-1.58-17.767a.461.461 0 0 0-.384-.415.453.453 0 0 0-.497.258l-3.57 8.025h-5.24a.462.462 0 0 0 0 .924H28a.453.453 0 0 0 .422-.266l2.969-6.675 1.688 18.997c.02.227.203.407.43.421l.03.001a.462.462 0 0 0 .45-.362l2.793-12.764.923 4a.462.462 0 0 0 .414.357.47.47 0 0 0 .464-.298l1.73-4.335h5.226a.46.46 0 1 0 0-.923z"/></defs><use xlink:href="#bfa" transform="translate(-22 -850)"/></symbol><symbol viewBox="0 0 15 15" id="search" xmlns="http://www.w3.org/2000/svg"><path d="M10.7 9.4H10l-.2-.2c.9-.9 1.4-2.2 1.4-3.6C11.1 2.5 8.7 0 5.6 0S0 2.5 0 5.6s2.5 5.6 5.6 5.6c1.4 0 2.7-.5 3.6-1.4l.2.2v.7l4.3 4.3 1.3-1.3-4.3-4.3zm-5.1 0c-2.1 0-3.9-1.7-3.9-3.9s1.7-3.9 3.9-3.9 3.9 1.7 3.9 3.9-1.8 3.9-3.9 3.9z"/></symbol><symbol viewBox="0 0 50 50" id="settings" xmlns="http://www.w3.org/2000/svg"><path d="M47.16 21.221l-5.91-.966a16.933 16.933 0 0 0-1.411-3.405l3.45-4.917a1.001 1.001 0 0 0-.112-1.282l-3.889-3.887a1 1 0 0 0-1.291-.104l-4.843 3.481a16.774 16.774 0 0 0-3.432-1.427l-1.031-5.886A1 1 0 0 0 27.706 2h-5.5a1 1 0 0 0-.987.839l-.956 5.854c-1.2.345-2.352.818-3.437 1.412l-4.83-3.45a1 1 0 0 0-1.289.106L6.82 10.648a.998.998 0 0 0-.112 1.28l3.399 4.863a16.937 16.937 0 0 0-1.438 3.46l-5.831.971a1 1 0 0 0-.836.986v5.5a1 1 0 0 0 .825.985l5.831 1.034a16.853 16.853 0 0 0 1.438 3.46L6.655 38c-.284.397-.239.942.106 1.289l3.888 3.891a1 1 0 0 0 1.281.112l4.87-3.411a16.871 16.871 0 0 0 3.445 1.424l.976 5.861a.997.997 0 0 0 .985.834h5.5c.485 0 .9-.348.984-.825l1.045-5.89a16.816 16.816 0 0 0 3.43-1.435l4.905 3.441a.999.999 0 0 0 1.282-.111l3.888-3.891a1 1 0 0 0 .104-1.292l-3.498-4.857a16.74 16.74 0 0 0 1.407-3.408l5.918-1.039a1 1 0 0 0 .827-.985v-5.5a.998.998 0 0 0-.838-.987zM25 32a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></symbol><symbol viewBox="0 0 24 25" id="shield" xmlns="http://www.w3.org/2000/svg"><defs><path id="bia" d="M980.574 511.582l-.033-.782-.779-.08c-2.989-.307-5.559-1.423-7.189-2.305-1.785-.966-2.866-1.87-2.877-1.88l-.584-.493-.585.492c-.01.01-1.093.915-2.877 1.881-1.63.882-4.2 1.998-7.189 2.305l-.779.08-.033.782c-.006.14-.13 3.473 1.153 7.51.758 2.382 1.852 4.517 3.252 6.345 1.76 2.295 4.002 4.104 6.667 5.376l.39.187.391-.187c2.665-1.272 4.908-3.08 6.667-5.376 1.4-1.828 2.494-3.963 3.252-6.345 1.284-4.037 1.16-7.37 1.153-7.51zm-11.463 17.406a16.365 16.365 0 0 1-5.599-4.623c-1.27-1.653-2.27-3.592-2.967-5.764a23.331 23.331 0 0 1-1.082-6.184 20.117 20.117 0 0 0 3.614-.893 23.155 23.155 0 0 0 3.48-1.542 22.52 22.52 0 0 0 2.554-1.612c.531.39 1.406.987 2.555 1.612a23.189 23.189 0 0 0 3.48 1.542c1.203.416 2.416.715 3.615.894a23.223 23.223 0 0 1-1.065 6.126c-.694 2.182-1.69 4.132-2.964 5.793a16.334 16.334 0 0 1-5.62 4.651z"/><path id="bib" d="M974.043 514.404l-1.262 1.263-4.705 4.705-2.385-2.385-.324-.324-.639.64-.64.64 3.988 3.988 7.247-7.247z"/></defs><use transform="translate(-957 -506)" xlink:href="#bia"/><use transform="translate(-957 -506)" xlink:href="#bib"/></symbol><symbol viewBox="0 0 24 24" id="shield-fill" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 7.83 6.439 11.486 9 12 2.561-.514 9-4.17 9-12V5l-9-4zm-1 15.414l-4.185-4.185 1.414-1.414L11 13.586l5.792-5.792 1.414 1.414L11 16.414z"/></symbol><symbol viewBox="0 0 15 14.52" id="star" xmlns="http://www.w3.org/2000/svg"><path d="M15 5.49l-4.93-.36L7.5 0 4.9 5.13 0 5.49l3.28 4-.94 5.07 5.16-2.37 5.16 2.33-1-5.07z"/></symbol><symbol viewBox="0 0 32 32" id="success" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13 13-5.832 13-13S23.168 3 16 3zm0 2c6.086 0 11 4.914 11 11s-4.914 11-11 11S5 22.086 5 16 9.914 5 16 5zm6.281 6.281L15 18.562l-4.281-4.28-1.438 1.437 5 5 .719.687.719-.687 8-8z"/></symbol><symbol viewBox="0 0 34.24 29.3" id="support" xmlns="http://www.w3.org/2000/svg"><path d="M32.51 9.19a.82.82 0 0 0-.51 1.56.87.87 0 0 1 .61.84v3.73a.87.87 0 0 1-.85.9h-1.11a13.72 13.72 0 1 0-27.2-2.5v2.5h-.92a.91.91 0 0 1-.9-.9v-3.73a.89.89 0 0 1 .63-.84.82.82 0 0 0 .53-1 .83.83 0 0 0-1-.53A2.52 2.52 0 0 0 0 11.59v3.73a2.54 2.54 0 0 0 2.53 2.53h1.7a.85.85 0 0 0 .86-.85v-3.3a12.08 12.08 0 1 1 15.65 11.59A2.62 2.62 0 0 0 18.48 24h-2.67a2.64 2.64 0 1 0 0 5.27h2.67a2.65 2.65 0 0 0 2.62-2.42 13.78 13.78 0 0 0 6.8-4.62 14.15 14.15 0 0 0 2.35-4.41h1.51a2.5 2.5 0 0 0 2.48-2.53v-3.7a2.51 2.51 0 0 0-1.73-2.4zm-14 18.47h-2.7a1 1 0 1 1 0-2h2.67a1 1 0 0 1 1 .77 1.49 1.49 0 0 1 0 .21 1 1 0 0 1-1 1.02z" data-name="Layer 2"/></symbol><symbol viewBox="0 0 20 33" id="tree" xmlns="http://www.w3.org/2000/svg"><defs><path id="bna" d="M69.135 463.58h-5.202a.33.33 0 0 1-.188-.063l-.91-.647a1.413 1.413 0 0 0-.823-.264h-2.006a1.494 1.494 0 0 0-1.461 1.522v6.815a1.494 1.494 0 0 0 1.46 1.522h9.13a1.493 1.493 0 0 0 1.46-1.522V465.1a1.492 1.492 0 0 0-1.46-1.521zm.364 7.363a.4.4 0 0 1-.364.426h-9.13a.398.398 0 0 1-.364-.427v-6.816a.398.398 0 0 1 .365-.425h2.006a.329.329 0 0 1 .189.062l.908.646c.24.173.529.266.825.266h5.2a.4.4 0 0 1 .366.426z"/><path id="bnb" d="M69.135 474.534h-5.202a.321.321 0 0 1-.188-.062l-.91-.647a1.415 1.415 0 0 0-.821-.265h-2.008a1.495 1.495 0 0 0-1.461 1.522v6.816a1.494 1.494 0 0 0 1.46 1.52h9.13a1.492 1.492 0 0 0 1.46-1.52v-5.842a1.493 1.493 0 0 0-1.46-1.522zm.364 7.364a.4.4 0 0 1-.364.426h-9.13a.398.398 0 0 1-.364-.426v-6.816a.398.398 0 0 1 .365-.426h2.006c.068 0 .134.022.189.06l.908.648c.24.173.529.265.825.266h5.2a.4.4 0 0 1 .366.426z"/><path id="bnc" d="M69.135 485.488h-5.202a.321.321 0 0 1-.188-.062l-.91-.647a1.415 1.415 0 0 0-.821-.265h-2.008a1.495 1.495 0 0 0-1.461 1.522v6.816a1.494 1.494 0 0 0 1.46 1.521h9.13a1.492 1.492 0 0 0 1.46-1.52v-5.843a1.493 1.493 0 0 0-1.46-1.522zm.364 7.364a.4.4 0 0 1-.364.426h-9.13a.398.398 0 0 1-.364-.426v-6.816a.398.398 0 0 1 .365-.426h2.006c.068 0 .134.022.189.062l.908.646c.24.173.529.265.825.266h5.2a.4.4 0 0 1 .366.426z"/><path id="bnd" d="M55.258 468.083h1.644a.548.548 0 0 0 0-1.096h-1.644a1.608 1.608 0 0 0-1.643 1.567v9.388h-2.19a.548.548 0 1 0 0 1.096h2.19v9.388a1.607 1.607 0 0 0 1.643 1.566h1.644a.547.547 0 0 0 0-1.096h-1.644a.512.512 0 0 1-.547-.471v-9.387h2.191a.548.548 0 0 0 0-1.096h-2.19v-9.388a.512.512 0 0 1 .546-.471z"/></defs><use xlink:href="#bna" transform="translate(-51 -462)"/><use xlink:href="#bnb" transform="translate(-51 -462)"/><use xlink:href="#bnc" transform="translate(-51 -462)"/><use xlink:href="#bnd" transform="translate(-51 -462)"/></symbol><symbol viewBox="0 0 10 15" id="up" xmlns="http://www.w3.org/2000/svg"><defs><path id="boa" d="M31 565h4v-7h2.667L33 549.833 28.333 558H31z"/></defs><use xlink:href="#boa" transform="translate(-28 -550)"/></symbol><symbol viewBox="0 0 19 15" id="users" xmlns="http://www.w3.org/2000/svg"><defs><path id="bpa" d="M40.365 528.34a2.304 2.304 0 0 0-.334-.022h-1.252v-.842l.764-.841c.382-.421.592-.966.592-1.534v-1.963a2.444 2.444 0 0 0-2.441-2.441.382.382 0 1 0 0 .764c.925 0 1.677.752 1.677 1.677v1.963c0 .378-.14.74-.394 1.02l-.786.866a.383.383 0 0 0-.176.322v1.39c0 .21.17.382.382.382h1.634a1.64 1.64 0 0 1 1.638 1.638v2.395h-9.095v-2.395c0-.704.447-1.306 1.072-1.537a.348.348 0 0 0 .084-.03c.153-.045.315-.071.482-.071h1.635a.382.382 0 0 0 .382-.382v-1.39a.383.383 0 0 0-.176-.322l-.787-.866a1.515 1.515 0 0 1-.394-1.02v-1.963c0-.925.752-1.677 1.677-1.677a.382.382 0 1 0 0-.764 2.443 2.443 0 0 0-2.44 2.44v1.964c0 .568.21 1.113.592 1.533l.764.842v.842h-1.253c-.106 0-.211.006-.314.02a2.18 2.18 0 0 0-2.124-1.705h-1.07v-.688l.668-.735a2.06 2.06 0 0 0 .537-1.39v-1.743c0-1.218-.991-2.21-2.21-2.21h-1.016c-1.22 0-2.21.992-2.21 2.21v1.743c0 .515.19 1.009.537 1.39l.667.735v.688h-1.07c-1.2 0-2.174.976-2.174 2.175v2.467c0 .21.17.38.382.38h5.94a.381.381 0 1 0 0-.762h-5.558v-2.085c0-.78.632-1.411 1.41-1.411h1.452a.382.382 0 0 0 .382-.382v-1.235a.382.382 0 0 0-.171-.318l-.695-.765a1.304 1.304 0 0 1-.338-.877v-1.743c0-.798.648-1.446 1.446-1.446h1.016c.798 0 1.447.648 1.447 1.446v1.743c0 .325-.121.636-.34.877l-.694.765a.382.382 0 0 0-.171.318v1.235c0 .21.17.382.382.382h1.45c.695 0 1.272.502 1.39 1.162a2.403 2.403 0 0 0-1.352 2.16v2.777c0 .21.17.382.382.382h9.858a.382.382 0 0 0 .382-.382v-2.777c0-.941-.545-1.757-1.335-2.15z"/></defs><use xlink:href="#bpa" transform="translate(-24 -519)"/></symbol><symbol viewBox="0 0 32 32" id="warning" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13 13-5.832 13-13S23.168 3 16 3zm0 2c6.086 0 11 4.914 11 11s-4.914 11-11 11S5 22.086 5 16 9.914 5 16 5zm-1 5v8h2v-8zm0 10v2h2v-2z"/></symbol><symbol viewBox="0 0 18.94 17.51" id="wave-arrow" xmlns="http://www.w3.org/2000/svg"><path d="M18.94 13.46L15 9.41v3.88h-.39c-2.52 0-3.79-2.13-5.26-4.6s-3.21-5.4-6.64-5.4H0v1h2.71c2.52 0 3.79 2.13 5.29 4.6s3.21 5.4 6.64 5.4H15v3.22z"/><path d="M18.58 3.87L15 0v3.29h-.67c-2.42-.22-4 1.2-5.19 2.9.32.49.63 1 .92 1.46 1.12-1.71 2.31-3 4.27-2.36H15v2.45zM6.93 9.64c-1.13 1.71-2.32 3-4.28 2.65H0v2h2.65c2.42-.07 4-1.49 5.2-3.18-.33-.5-.64-.99-.92-1.47z"/></symbol><symbol viewBox="0 0 17 17" id="widget" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><path d="M9.5 13.25h8v.5h-8zM6.3 7H.7a.7.7 0 0 1-.7-.7V.7A.7.7 0 0 1 .7 0h5.6a.7.7 0 0 1 .7.7v5.6a.7.7 0 0 1-.7.7zm10 0h-5.6a.7.7 0 0 1-.7-.7V.7a.7.7 0 0 1 .7-.7h5.6a.7.7 0 0 1 .7.7v5.6a.7.7 0 0 1-.7.7zm-10 10H.7a.7.7 0 0 1-.7-.7v-5.6a.7.7 0 0 1 .7-.7h5.6a.7.7 0 0 1 .7.7v5.6a.7.7 0 0 1-.7.7z"/><path d="M13.25 9.5h.5v8h-.5z"/></g></symbol></svg></div>
+    <div class="account__container">
+      <aside class="aside">
+        <div class="aside__account">
+          <div class="aside__account-avatar"><img class="aside__account-avatar-img" src="img/demo/avatar.jpg"/>
+            <div class="aside__account-avatar-status"></div>
+          </div>
+          <div class="aside__account-name" title="ООО &quot;Very long text Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi.&quot;">ООО "Very long text Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, modi."</div>
+          <div class="aside__account-row">
+            <div class="aside__account-key">Мой сайт:</div>
+            <div class="aside__account-value"><a class="aside__account-link" href="#!" title="very-long-text-vasha-ﬁrmavasha-ﬁrmavasha-ﬁrma.SITE.ru">very-long-text-vasha-ﬁrmavasha-ﬁrmavasha-ﬁrma.SITE.ru</a></div>
+          </div>
+          <div class="aside__account-row">
+            <div class="aside__account-key">Пакет:</div>
+            <div class="aside__account-value"><a class="aside__account-link" href="#!">Тестовый</a>
+              <svg class="icon icon--wave-arrow">
+                <use xlink:href="#wave-arrow"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="aside__account-collapsed"><a class="aside__account-collapsed-link" href="#!">Мой сайт</a><a class="aside__account-collapsed-icon" href="#!">
+              <svg class="icon icon--wave-arrow">
+                <use xlink:href="#wave-arrow"></use>
+              </svg></a></div>
+        </div>
+        <form class="aside__search">
+          <input class="aside__search-input" type="text" name="search" autocomplete="off"/>
+          <svg class="icon icon--search icon--aside-search-icon">
+            <use xlink:href="#search"></use>
+          </svg>
+        </form>
+        <div class="aside__nav-scroll-wrapper">
+          <div class="aside__nav-scroll">
+            <nav class="aside__nav">
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--dashboard">
+                      <use xlink:href="#dashboard"></use>
+                    </svg>
+                  </div>Панель управления</a></div>
+              <div class="aside__nav-item active"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--cube">
+                      <use xlink:href="#cube"></use>
+                    </svg>
+                  </div>Товары и Услуги</a>
+                <div class="aside__nav-sub">
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Управление товарами
+                      <div class="aside__nav-tip">28</div></a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Импорт
+                      <div class="aside__nav-sub-icon">
+                        <svg class="icon icon--clock">
+                          <use xlink:href="#clock"></use>
+                        </svg>
+                        <svg class="icon icon--attention">
+                          <use xlink:href="#attention"></use>
+                        </svg>
+                      </div></a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Экспорт</a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Акции
+                      <div class="aside__nav-tip">2</div></a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Массовое изменение цен</a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Общее описание товаров</a></div>
+                </div>
+              </div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--basket">
+                      <use xlink:href="#basket"></use>
+                    </svg>
+                  </div>Заказы и сообщения</a>
+                <div class="aside__nav-sub">
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Управление товарами длинная строка
+                      <div class="aside__nav-tip">999</div></a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Управление товарами длинная строка
+                      <div class="aside__nav-sub-icon">
+                        <svg class="icon icon--clock">
+                          <use xlink:href="#clock"></use>
+                        </svg>
+                        <svg class="icon icon--attention">
+                          <use xlink:href="#attention"></use>
+                        </svg>
+                      </div></a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Управление товарами длинная строка
+                      <div class="aside__nav-tip">999</div>
+                      <div class="aside__nav-sub-icon">
+                        <svg class="icon icon--clock">
+                          <use xlink:href="#clock"></use>
+                        </svg>
+                        <svg class="icon icon--attention">
+                          <use xlink:href="#attention"></use>
+                        </svg>
+                      </div></a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Любые иконки
+                      <div class="aside__nav-sub-icon">
+                        <svg class="icon icon--settings">
+                          <use xlink:href="#settings"></use>
+                        </svg>
+                        <svg class="icon icon--crown icon--color-warning">
+                          <use xlink:href="#crown"></use>
+                        </svg>
+                        <svg class="icon icon--dialog">
+                          <use xlink:href="#dialog"></use>
+                        </svg>
+                        <svg class="icon icon--shield icon--color-success">
+                          <use xlink:href="#shield"></use>
+                        </svg>
+                        <svg class="icon icon--star icon--color-warning">
+                          <use xlink:href="#star"></use>
+                        </svg>
+                      </div></a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Общее описание товаров управление товарами</a></div>
+                </div>
+              </div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--dialog">
+                      <use xlink:href="#dialog"></use>
+                    </svg>
+                  </div>Отзывы</a></div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--users">
+                      <use xlink:href="#users"></use>
+                    </svg>
+                  </div>Клиенты</a></div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--up">
+                      <use xlink:href="#up"></use>
+                    </svg>
+                  </div>Selo.Контекст</a></div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--graph">
+                      <use xlink:href="#graph"></use>
+                    </svg>
+                  </div>Вебмастер и SEO</a></div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--star">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                  </div>Бонусы и рейтинг</a></div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--cols">
+                      <use xlink:href="#cols"></use>
+                    </svg>
+                  </div>Информация на сайте</a></div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--widget">
+                      <use xlink:href="#widget"></use>
+                    </svg>
+                  </div>Включенные виджеты</a></div>
+              <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+                  <div class="aside__nav-icon">
+                    <svg class="icon icon--package">
+                      <use xlink:href="#package"></use>
+                    </svg>
+                  </div>Selo.Магазин</a>
+                <div class="aside__nav-sub aside__nav-sub--color">
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Виджеты</a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Дизайны</a></div>
+                  <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Услуги</a></div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <nav class="aside__nav-fixed">
+          <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+              <div class="aside__nav-icon">
+                <svg class="icon icon--pulse">
+                  <use xlink:href="#pulse"></use>
+                </svg>
+              </div>Статистика</a></div>
+          <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+              <div class="aside__nav-icon">
+                <svg class="icon icon--settings">
+                  <use xlink:href="#settings"></use>
+                </svg>
+              </div>Настройки</a>
+            <div class="aside__nav-sub">
+              <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Управление товарами</a></div>
+              <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Управление товарами</a></div>
+              <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Управление товарами</a></div>
+              <div class="aside__nav-sub-item"><a class="aside__nav-sub-link" href="#!">Управление товарами</a></div>
+            </div>
+          </div>
+          <div class="aside__nav-item"><a class="aside__nav-link" href="#!">
+              <div class="aside__nav-icon">
+                <svg class="icon icon--crown">
+                  <use xlink:href="#crown"></use>
+                </svg>
+              </div>Тарифы и счета</a></div>
+        </nav>
+      </aside>
+      <div class="account__container-main">
+        <header class="header">
+          <button class="header__btn header__menu">
+            <div class="header__menu-burger"><span></span><span></span><span></span></div>
+          </button><a class="header__logo header__btn" href="#!"><img class="header__logo-img" src="img/logo.png" alt="logo"/></a>
+          <button class="header__btn header__menu-right">
+            <div class="header__menu-burger header__menu-burger--circles"><span></span><span></span><span></span></div>
+          </button>
+          <div class="dropdown header__account">
+            <div class="dropdown__select header__btn">КАБИНЕТ КОМПАНИИ</div>
+            <div class="dropdown__options"><a class="dropdown__option" href="#!">КАБИНЕТ ПОКУПАТЕЛЯ</a></div>
+          </div>
+          <div class="header__to-right">
+            <button class="header__btn">
+              <div class="badge">28</div>
+              <svg class="icon icon--bell icon--color-dark">
+                <use xlink:href="#bell"></use>
+              </svg>
+            </button>
+            <button class="header__btn">
+              <div class="badge">1</div>
+              <svg class="icon icon--email icon--color-dark">
+                <use xlink:href="#email"></use>
+              </svg>
+            </button>
+            <div class="dropdown header__exit">
+              <button class="dropdown__select header__btn">
+                <svg class="icon icon--exit icon--color-dark">
+                  <use xlink:href="#exit"></use>
+                </svg>
+              </button>
+              <div class="dropdown__options"><a class="dropdown__option" href="#!">Выход</a><a class="dropdown__option" href="#!">Выход (все устройства)</a></div>
+            </div>
+          </div>
+        </header>
+        <main class="account__main">
+          <section class="page-info">
+            <div class="page-info__title">Компоненты вёрстки</div>
+            <div class="breadcrumb">
+              <div class="breadcrumb__item"><a class="breadcrumb__link" href="#!">
+                  <svg class="icon icon--dashboard">
+                    <use xlink:href="#dashboard"></use>
+                  </svg></a></div>
+              <div class="breadcrumb__item"><a class="breadcrumb__link" href="#!">Раздел</a></div>
+            </div>
+          </section>
+          <div class="container cards-spacer">
+            <div class="card">
+              <div class="card__content text-content">
+                <div class="info info--small info--warning info--inline">
+                  <svg class="icon icon--info">
+                    <use xlink:href="#info"></use>
+                  </svg>
+                  <p>Теги стилизованы только в обертке классом 
+                    <mark>text-content</mark>
+                  </p>
+                </div>
+                <h1>Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. </h1>
+                <h2>Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. </h2>
+                <h3>Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. </h3>
+                <h4>Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. </h4>
+                <h5>Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. </h5>
+                <h6>Стрелок обернулся и уперся взглядом в лицо старика, который спал у дверей, когда он вошел в бар. </h6>
+                <p>Прямо за стойкой, слева от зеркала, стояла маленькая переносная печка с тлеющими углями. Женщина нырнула в какую-то каморку за печкой и вернулась уже с куском мяса, уложенным на бумажку. Отрезав три тоненьких ломтика, она швырнула их на решетку над углями. Поднявшийся запах сводил с ума. Стрелок, однако, стоял с непробиваемо равнодушным видом, как бы и не замечая, что происходит вокруг: чуть сбившийся ритм пианино, заминку в игре картежников, косые взгляды завсегдатаев.</p>
+                <p>Он знал, <b>что она ему врет</b>, и знал, <i>почему она врет</i>, и <mark>решил</mark> не <ins>настаивать</ins>.</p>
+                <p> <small>Отрезав три тоненьких ломтика, она швырнула их на решетку над углями.</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__content">
+                <div class="h3 mb-6">Tooltips</div>
+                <div class="block">
+                  <div class="btns-spacer"><small class="mr-2">data-tippy="Tooltip text"</small>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text">default</div>
+                  </div>
+                  <div class="btns-spacer"><small class="mr-2">data-tippy-size="small|none|large"</small>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте" data-tippy-size="small">small size</div>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационныеепредприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в наа каталоге.">default size</div>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационныеепредприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в наа каталоге." data-tippy-size="large">large size</div>
+                  </div>
+                  <div class="btns-spacer"><small class="mr-2">data-tippy-placement="left"</small>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text" data-tippy-placement="left">left</div>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text" data-tippy-placement="top">top</div>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text" data-tippy-placement="right">right</div>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text" data-tippy-placement="bottom">bottom</div>
+                  </div>
+                  <div class="btns-spacer"><small class="mr-2">data-tippy-interactive="true"</small>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text &lt;button class='btn btn--tiny'&gt;Click&lt;/button&gt;" data-tippy-interactive="true">interactive</div>
+                  </div>
+                  <div class="btns-spacer"><small class="mr-2">data-tippy-trigger="click"</small>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text" data-tippy-trigger="click">click</div>
+                  </div>
+                  <div class="btns-spacer"><small class="mr-2">data-tippy-theme="white"</small>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте" data-tippy-size="small" data-tippy-theme="white">small size</div>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационныеепредприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в наа каталоге." data-tippy-theme="white">default size</div>
+                    <div class="btn btn--tiny" data-tippy="Tooltip text Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационныеепредприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в наа каталоге." data-tippy-theme="white" data-tippy-size="large">large size</div>
+                  </div>
+                  <div class="devider"></div>
+                  <div class="btns-spacer"><small class="mr-2">data-tippy-template="#id"</small>
+                    <div class="btn btn--tiny btn--success" data-tippy-template="tooltip-status-unactive" data-tippy-placement="bottom-start" data-tippy-theme="white" data-tippy-interactive="true" data-tippy-size="large">tooltip-status-unactive</div>
+                    <div class="btn btn--tiny btn--success" data-tippy-template="tooltip-unpaid-order" data-tippy-placement="bottom-start" data-tippy-theme="white" data-tippy-interactive="true" data-tippy-size="small">tooltip-unpaid-order</div>
+                    <div class="btn btn--tiny btn--success" data-tippy-template="tooltip-prolong-order" data-tippy-placement="bottom-start" data-tippy-theme="white" data-tippy-interactive="true" data-tippy-size="small">tooltip-prolong-order</div>
+                    <div class="btn btn--tiny btn--success" data-tippy-template="tooltip-is-pro" data-tippy-placement="right" data-tippy-interactive="true" data-tippy-theme="white" data-tippy-size="small">tooltip-is-pro</div>
+                    <div class="btn btn--tiny btn--success" data-tippy-template="tooltip-go-pro" data-tippy-placement="right" data-tippy-interactive="true" data-tippy-theme="white" data-tippy-size="small">tooltip-go-pro</div>
+                  </div>
+                </div><a class="link mt-6" href="https://atomiks.github.io/tippyjs/all-options/">Full tooltips documentation</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__content">
+                <div class="btns-spacer">
+                  <div class="btn">btn</div>
+                  <div class="btn btn--success">success</div>
+                  <div class="btn btn--warning">warning</div><a class="btn btn--danger" href="#!">danger</a>
+                  <div class="btn btn--dark">dark</div>
+                  <div class="btn btn--outline">outline</div>
+                  <div class="btn btn--success btn--outline">outline</div>
+                  <div class="btn btn--warning btn--outline">outline</div>
+                  <div class="btn btn--danger btn--outline">outline</div>
+                  <div class="btn btn--dark btn--outline">outline</div>
+                </div>
+                <div class="btns-spacer">
+                  <button class="btn--reset">reset</button>
+                  <div class="btn btn--pseudo">pseudo</div>
+                  <div class="btn btn--tiny">tiny</div>
+                  <div class="btn btn--success btn--small">small</div>
+                  <div class="btn btn--warning">btn</div>
+                  <div class="btn btn--danger btn--big">big</div>
+                  <div class="btn btn--dark btn--large">large</div>
+                </div>
+                <div class="btns-spacer">
+                  <div class="btn btn--tiny btn--block">block</div>
+                  <div class="btn btn--small btn--block btn--success">block</div>
+                  <div class="btn btn--small btn--block btn--warning">block</div>
+                  <div class="btn btn--block btn--danger">block</div>
+                  <div class="btn btn--large btn--block btn--dark">block</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__content">
+                <div class="h3 mb-8">New alert blocks</div>
+                <div class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+                <div class="info">
+                  <svg class="icon icon--info">
+                    <use xlink:href="#info"></use>
+                  </svg>
+                  <div class="text-content">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+                  </div>
+                </div>
+                <div class="info info--success">
+                  <svg class="icon icon--success">
+                    <use xlink:href="#success"></use>
+                  </svg>
+                  <div class="text-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?</p>
+                  </div>
+                </div>
+                <div class="info info--warning">
+                  <svg class="icon icon--warning">
+                    <use xlink:href="#warning"></use>
+                  </svg>
+                  <div class="text-content">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?</p>
+                  </div>
+                </div>
+                <div class="info info--danger">
+                  <svg class="icon icon--danger">
+                    <use xlink:href="#danger"></use>
+                  </svg>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?</p>
+                </div>
+                <div class="info info--danger info--small">
+                  <svg class="icon icon--danger">
+                    <use xlink:href="#danger"></use>
+                  </svg>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?</p>
+                </div>
+                <div class="info info--danger info--inline">
+                  <svg class="icon icon--danger">
+                    <use xlink:href="#danger"></use>
+                  </svg>
+                  <div class="h2 text-bold color-danger">Lorem ipsum dolor sit</div>
+                </div>
+                <div class="info">
+                  <svg class="icon icon--info">
+                    <use xlink:href="#info"></use>
+                  </svg>
+                  <div class="text-content">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure? Repellat modi sit delectus, adipisci sunt dolorum optio provident molestiae laudantium! Quos sequi quasi explicabo, dignissimos officiis consectetur velit! Necessitatibus, explicabo hic quidem molestiae ab eveniet magnam animi dolorem odio!</p>
+                    <div class="devider"></div>
+                    <div class="btns-spacer">
+                      <div class="btn">Quidem molestiae</div>
+                      <div class="btn btn--pseudo">Commodi</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="info"><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit</small></div>
+                <div class="info info--warning info--small">
+                  <svg class="icon icon--warning">
+                    <use xlink:href="#warning"></use>
+                  </svg>
+                  <div class="text-content">
+                    <h5><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit</small></h5><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?</small>
+                  </div>
+                </div>
+                <div class="info info--warning info--small">
+                  <svg class="icon icon--danger">
+                    <use xlink:href="#danger"></use>
+                  </svg><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?</small>
+                </div>
+                <div class="info info--warning info--unbox">
+                  <svg class="icon icon--danger">
+                    <use xlink:href="#danger"></use>
+                  </svg>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ad quos atque amet accusantium expedita sapiente explicabo quis natus sint sed officia exercitationem, nostrum, a repudiandae iure?</p>
+                </div>
+                <div class="info info--success info--unbox">
+                  <svg class="icon icon--success">
+                    <use xlink:href="#success"></use>
+                  </svg>
+                  <div class="h2">Lorem ipsum dolor sit consectetur</div>
+                </div>
+                <div class="info info--unbox">
+                  <svg class="icon icon--warning">
+                    <use xlink:href="#warning"></use>
+                  </svg>
+                  <div class="h1 color-grey">Lorem ipsum dolor sit</div>
+                </div>
+                <div class="info info--success info--unbox info--small">
+                  <svg class="icon icon--success">
+                    <use xlink:href="#success"></use>
+                  </svg><small class="color-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae neque minus similique? Commodi amet, nesciunt dolorum voluptates delectus ipsa libero error maiores officia, itaque dicta? Perferendis, harum quaerat.</small>
+                </div>
+                <div class="info info--small info--unbox">
+                  <svg class="icon icon--info">
+                    <use xlink:href="#info"></use>
+                  </svg>
+                  <div class="color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae neque minus similique?</div>
+                </div>
+                <div class="info info--danger info--small info--unbox">
+                  <svg class="icon icon--danger">
+                    <use xlink:href="#danger"></use>
+                  </svg>
+                  <div class="h3 color-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ducimus.</div>
+                </div>
+                <div class="info info--small info--unbox">
+                  <svg class="icon icon--danger">
+                    <use xlink:href="#danger"></use>
+                  </svg>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ducimus.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cards-spacer">
+              <div class="alert alert--warning">
+                <div class="alert__icon">
+                  <svg class="icon icon--attention icon--color-warning">
+                    <use xlink:href="#attention"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <h6>Обратите внимание!</h6>
+                  <p>В сервисе Яндекс.Деньги установлены ограничения наадиноразового платежа: из идентифицированнооо кошелька — до 250 000 рублей, из анонимного — до 15 000 рублей.</p>
+                </div>
+              </div>
+              <div class="alert alert--warning alert--small">
+                <div class="alert__icon">
+                  <svg class="icon icon--attention icon--color-warning">
+                    <use xlink:href="#attention"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <h6>Обратите внимание!</h6>
+                  <p>В сервисе Яндекс.Деньги установлены ограничения наадиноразового платежа: из идентифицированнооо кошелька — до 250 000 рублей, из анонимного — до 15 000 рублей.</p>
+                </div>
+              </div>
+              <div class="alert alert--warning alert--small">
+                <div class="alert__icon">
+                  <svg class="icon icon--attention icon--color-warning">
+                    <use xlink:href="#attention"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <p>Обратите внимание! После установки галочки e-mail будет «открыто» написан на сайте, и он наверняка попадете в базу адресов тех, кто осуществляет массовые рассылки (спам).</p>
+                </div>
+              </div>
+              <div class="alert alert--warning alert--small">
+                <div class="alert__icon">
+                  <svg class="icon icon--attention icon--color-danger">
+                    <use xlink:href="#attention"></use>
+                  </svg>
+                </div>
+                <div class="alert__content"><b>У вас имеется компания! Опасно,  последствия необратимы.</b></div>
+              </div>
+              <div class="alert alert--warning">
+                <div class="alert__icon">
+                  <svg class="icon icon--attention icon--color-warning">
+                    <use xlink:href="#attention"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <div class="alert__row">
+                    <p>Подтвердите E-mail <b>user@mail.ru</b>, и получайте заявки от клиентов через портал.</p>
+                    <div class="btns-spacer">
+                      <button class="btn">Выслать подтверждение</button>
+                    </div>
+                  </div>
+                  <div class="alert__row">
+                    <p>Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию</p>
+                    <div class="btns-spacer">
+                      <button class="btn">Добавить товар</button>
+                      <button class="btn">Импорт</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="alert">
+                <div class="alert__content">
+                  <p>Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию</p>
+                </div>
+              </div>
+              <div class="alert alert--warning">
+                <div class="alert__content">
+                  <p>Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию</p>
+                </div>
+              </div>
+              <div class="alert alert--danger">
+                <div class="alert__content">
+                  <p>Вы не добавили ни одного товара, Клиенты не смогут найти вашу Компанию</p>
+                </div>
+              </div>
+              <div class="alert alert--notification alert--danger">
+                <div class="alert__icon">
+                  <svg class="icon icon--tree icon--color-dark">
+                    <use xlink:href="#tree"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <p>У 24 товаров не указана рубрика. Такие товары не будут выводиться в нашем каталоге пока вы не измените рубрику. </p><a href="#!">Смотреть товары</a>
+                </div>
+              </div>
+              <div class="alert alert--notification">
+                <div class="alert__icon">
+                  <div class="badge">3</div>
+                  <svg class="icon icon--email icon--color-dark">
+                    <use xlink:href="#email"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <div class="alert__row">
+                    <p>3 новых сообщения </p><a class="btn" href="#!">Перейти к сообщениям</a>
+                  </div>
+                </div>
+              </div>
+              <div class="alert alert--notification">
+                <div class="alert__icon">
+                  <svg class="icon icon--cart icon--color-dark">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <div class="alert__row">
+                    <p>29 новых заказов</p><a class="btn" href="#!">Перейти к заказам</a>
+                  </div>
+                </div>
+              </div>
+              <div class="alert alert--notification">
+                <div class="alert__icon">
+                  <svg class="icon icon--email icon--color-dark">
+                    <use xlink:href="#email"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <div class="alert__row">
+                    <p>3 новых сообщения </p><a href="#!">Перейти к сообщениям</a>
+                  </div>
+                </div>
+              </div>
+              <div class="alert alert--notification">
+                <div class="alert__icon">
+                  <div class="badge">28</div>
+                  <svg class="icon icon--cart icon--color-dark">
+                    <use xlink:href="#cart"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <p>28 новых заказов<a href="#!">Перейти к заказам</a></p>
+                </div>
+              </div>
+              <div class="alert alert--notification">
+                <div class="alert__icon">
+                  <svg class="icon icon--download icon--color-dark">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                </div>
+                <div class="alert__content">
+                  <h6>Незавершенный импорт</h6>
+                  <p>29 новых заказов</p>
+                  <div class="btns-spacer"><a class="btn" href="#!">Завершить импорт</a><a class="btn btn--dark btn--outline" href="#!">Отменить импорт</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+    <div class="fixed-btns">
+      <button class="btn btn--warning">
+        <svg class="icon icon--phone">
+          <use xlink:href="#phone"></use>
+        </svg>Обратный звонок
+      </button>
+      <button class="btn btn--bag-report">
+        <svg class="icon icon--bug">
+          <use xlink:href="#bug"></use>
+        </svg>Сообщить об ошибке
+      </button>
+      <button class="btn btn--success">
+        <svg class="icon icon--support">
+          <use xlink:href="#support"></use>
+        </svg>Ваш менеджер
+      </button>
+    </div>
+    <template id="modal-widget">
+      <div class="modal__header">
+        <div class="modal__header-back" onclick="modal.close()">
+          <svg class="icon icon--back">
+            <use xlink:href="#back"></use>
+          </svg>Виджеты
+        </div>
+        <div class="modal__header-title">
+          <svg class="icon icon--devider">
+            <use xlink:href="#devider"></use>
+          </svg>UniSender
+        </div>
+      </div>
+      <div class="modal__slider">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <iframe src="https://www.youtube.com/embed/yIHsAlhmfvY?rel=0&amp;amp;showinfo=0&amp;amp;enablejsapi=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+              </li>
+              <li class="glide__slide"><img src="img/demo/widget/1.png"></li>
+              <li class="glide__slide"><img src="img/demo/widget/2.png"></li>
+              <li class="glide__slide"><img src="img/demo/widget/3.png"></li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="modal__slider-arrow modal__slider-arrow--prev" data-glide-dir="&lt;"></button>
+            <button class="modal__slider-arrow modal__slider-arrow--next" data-glide-dir="&gt;"></button>
+          </div>
+        </div>
+      </div>
+      <div class="modal__content">
+        <div class="modal__panel">
+          <div class="widget-modal__img-wrapper">
+            <div class="widget-modal__img-status">
+              <div class="icon--connect" data-tooltip="Виджет подключен"></div>
+              <div data-tooltip="Виджет доступен в PRO-пакете">
+                <svg class="icon icon--crown icon--color-yellow">
+                  <use xlink:href="#crown"></use>
+                </svg>
+              </div>
+            </div><img class="widget-modal__img" src="img/demo/logos/1.png" alt="widget">
+          </div>
+          <button class="widget-modal__btn btn btn--success btn--large" onclick="initWidgetModalSlider();">Подключить</button>
+        </div>
+        <div class="modal__tab tab tab--full-width" data-tabs>
+          <button class="tab__item active">Описание</button>
+          <button class="tab__item">Настройки</button>
+        </div>
+        <div data-panes>
+          <div class="active">
+            <div class="info info--small">
+              <svg class="icon icon--attention icon--color-warning">
+                <use xlink:href="#attention"></use>
+              </svg>
+              <div class="text-small">Обратите внимание! В сервисе Яндекс.Деньги установлены ограничения наадиноразового платежа: из идентифицированнооо кошелька — до 250 000 рублей, из анонимного — до 15 000 рублей.</div>
+            </div>
+            <div class="text-content">
+              <p>Для того чтобы настроить прием платежей через сервис Яндекс.Касса, выполните следующие действия:</p>
+              <ol>
+                <li>Зарегистрируйтесь на сайте <a href="#!">Яндекс.Касса</a>.</li>
+                <li>На странице регистрации заполните все поля и нажмите «Отправить заявку».</li>
+                <li>После того как процедура регистрации завершена и все необходимые анкеты заполнены, в <a href="#!">личном кабинете</a> Вам необходимо выбрать пункт «Способ подключения».</li>
+                <li>
+                  <p>Из предложенных способов выберите «HTTP-протокол» и нажмите кнопку «Далее».</p>
+                  <p>Внимание! В случае изменения домена (адреса вашего сайта) прием оплаты работать не будет. Если вы планируете изменить домен (подключить внешний), сделайте это до подключения приема оплаты.</p>
+                </li>
+                <li>Необходимо заполнить все поля в предложенной таблице и нажать «Сохранить».</li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <form class="form">
+              <div class="input">
+                <div class="input__label"></div>
+                <input class="input__checkbox" type="checkbox" name="subscriptions1" id="subscriptions1" checked>
+                <label class="input__checkbox-label" for="subscriptions1">Новые возможности портала</label>
+              </div>
+              <div class="input">
+                <div class="input__label"></div>
+                <input class="input__checkbox" type="checkbox" name="subscriptions2" id="subscriptions2" checked>
+                <label class="input__checkbox-label" for="subscriptions2">Советы по привлечению клииов</label>
+              </div>
+              <div class="input mb-6">
+                <div class="input__label"></div>
+                <input class="input__checkbox" type="checkbox" name="subscriptions3" id="subscriptions3">
+                <label class="input__checkbox-label" for="subscriptions3">Статистика посещаемости сайта</label>
+              </div>
+              <div class="input input--required input--row">
+                <label class="input__label" for="shopId">shopId</label>
+                <input class="input__elem" type="text" name="shopId" id="shopId" placeholder="">
+              </div>
+              <div class="input input--required input--row">
+                <label class="input__label" for="scid">scid</label>
+                <input class="input__elem" type="text" name="scid" id="scid" placeholder="">
+              </div>
+              <div class="input input--required input--row">
+                <label class="input__label" for="ShopPassword">ShopPassword</label>
+                <input class="input__elem" type="text" name="ShopPassword" id="ShopPassword" placeholder="">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn--outline btn--dark btn--big">Отключить</button>
+        </div>
+      </div>
+    </template>
+    <template id="modal-close-welcome-block">
+      <div class="modal-simple">
+        <div class="modal-simple__content">
+          <div class="modal-simple__title">Вы действительно желаете закрыть информационный блок?</div>
+          <div class="modal-simple__text">Вы выполнили не все рекоммендуемые действия!</div>
+          <div class="modal-simple__btns btns-spacer">
+            <div class="btn btn--danger" onclick="u('.welcome').remove(); u('.welcome-step__wrapper').first().remove(); modal.close()">Закрыть</div>
+            <div class="btn btn--success" onclick="modal.close()">Оставить</div>
+          </div>
+        </div>
+      </div>
+    </template>
+    <template id="tooltip-status-unactive">
+      <div class="space-saver text-content">
+        <p>Для подтверждения подлинности компании, а также контактной информации, указанной на сайте, просим Вас предоставить на проверку регистрационные документы предприятия. Это повысит доверие покупателей к Вашему магазину, а также обеспечит Вашим товарам более высокие позиции в нашем каталоге. У компаний, не предоставивших документы на проверку, в карточке товара отображается уведомление, предостерегающее покупателей от внесения предоплаты при покупке товара.</p>
+        <div class="h5 my-3 text-center"><a href="#!">Подробно о процедуре проверки документов</a></div>
+        <p class="color-grey"><small>Эта мера вызвана участившимися обращениями покупателей, ставшими жертвами недобросовестных компаний, размещающихся на нашем портале.</small></p>
+        <hr>
+        <div class="items-justify-around">
+          <div class="info info--unbox info--small info--inline">
+            <svg class="icon icon--shield-fill icon--color-success">
+              <use xlink:href="#shield-fill"></use>
+            </svg><b class="color-success">Подтвержденная</b>
+          </div>
+          <div class="info info--unbox info--small info--inline">
+            <svg class="icon icon--danger-fill icon--color-danger">
+              <use xlink:href="#danger-fill"></use>
+            </svg><b class="color-danger">Не подтвержденная</b>
+          </div>
+        </div>
+        <p class="color-grey text-small text-center mt-2"><small>Обозначение статуса проверки компании в личном кабинете</small></p>
+      </div>
+    </template>
+    <template id="tooltip-unpaid-order">
+      <div class="space-saver text-content">
+        <p class="mb-1 color-grey">Создан заказ:</p>
+        <h5 class="color-main text-bold"><a href="#!">Пакет "Старт"</a></h5>
+        <div class="btn btn--small btn-block mt-1">Оплатить заказ</div>
+      </div>
+    </template>
+    <template id="tooltip-prolong-order">
+      <div class="space-saver text-content">
+        <p class="color-grey mb-0">Ваш пакет:</p>
+        <h5 class="color-main text-bold mb-2"><a href="#!">"Старт"</a></h5>
+        <p class="color-grey mb-0"> Действует до:</p>
+        <p class="color-main text-bold mb-0">23.10.2019 
+          <div class="color-grey">осталось 291 день</div>
+        </p>
+        <div class="btn btn--small btn-block mt-1">Продлить пакет</div>
+      </div>
+    </template>
+    <template id="tooltip-is-pro">
+      <div class="text-content">
+        <h6 class="color-grey">У вас <b class="color-main"><a href="#!">ПРО-пакет</a></b></h6>
+      </div>
+    </template>
+    <template id="tooltip-go-pro">
+      <div class="text-content">
+        <h6 class="color-grey">Перейти на <b class="color-main"><a href="#!">ПРО-пакет</a></b></h6>
+      </div>
+    </template>
+    <script type="text/javascript" src="scripts/libs.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>

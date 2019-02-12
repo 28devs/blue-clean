@@ -1,0 +1,38 @@
+form.form(method="get" action="#")
+  .cards-spacer
+    .card.tab__content
+      .card__content
+        .form__title Email рассылки
+          button.btn(type="submit") Сохранить
+        .form__spacer
+          .input
+            .input__label
+            input.input__checkbox(type="checkbox" name="subscriptions1" id="subscriptions1" checked)
+            label.input__checkbox-label(for="subscriptions1") Новые возможности портала
+              .icon.icon--help
+          .input
+            .input__label
+            input.input__checkbox(type="checkbox" name="subscriptions2" id="subscriptions2" checked)
+            label.input__checkbox-label(for="subscriptions2") Советы по привлечению клииов
+              .icon.icon--help
+          .input
+            .input__label
+            input.input__checkbox(type="checkbox" name="subscriptions3" id="subscriptions3")
+            label.input__checkbox-label(for="subscriptions3") Статистика посещаемости сайта
+              .icon.icon--help
+          .input
+            .input__label
+            input.input__checkbox(type="checkbox" name="subscriptions4" id="subscriptions4" checked)
+            label.input__checkbox-label(for="subscriptions4") Уведомления о необходимости проверить актуальность товаров
+              .icon.icon--help
+
+    .card.tab__content
+      .card__content
+        .form__title SMS рассылки
+        .form__spacer
+          .input
+            .input__label
+            input.input__checkbox(type="checkbox" name="subscriptions" id="subscriptions" checked)
+            label.input__checkbox-label(for="subscriptions") Акционные СМС-рассылки
+        .form__footer
+          button.btn(type="submit") Сохранить

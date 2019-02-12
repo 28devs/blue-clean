@@ -3,7 +3,6 @@ include ../inc/mixins.pug
 include ../blocks/header.pug
 include ../blocks/footer.pug
 include ../blocks/aside.pug
-include ../blocks/page-info.pug
 
 doctype html
 html(lang="en" dir="ltr")
@@ -20,6 +19,10 @@ html(lang="en" dir="ltr")
       link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
 
   body
+
+    #sprite-symbol-svg
+      include ../../img/symbol/svg/sprite.symbol.svg
+
     .account__container
       block aside
         +aside
@@ -33,6 +36,21 @@ html(lang="en" dir="ltr")
 
         block footer
           +footer
+
+    .fixed-btns
+      button.btn.btn--warning
+        +svg-icon("phone")
+        | Обратный звонок
+      button.btn.btn--bag-report
+        +svg-icon("bug")
+        | Сообщить об ошибке
+      button.btn.btn--success
+        +svg-icon("support")
+        | Ваш менеджер
+
+    include ../blocks/modal-widget.pug
+    include ../blocks/modals-simple.pug
+    include ../inc/tooltips.pug
 
     block foot
       script(type="text/javascript" src="scripts/libs.min.js")

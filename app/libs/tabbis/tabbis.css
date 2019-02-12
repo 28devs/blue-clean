@@ -1,0 +1,6 @@
+[data-panes] > * {
+	display: none;
+}
+[data-panes] > .active {
+	display: block;
+}

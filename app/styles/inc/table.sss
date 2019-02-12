@@ -1,0 +1,25 @@
+.table
+  display: block
+  text: 12px 1 @sm 14px @md 16px
+  &__row
+    box: center space-between
+    border-bottom: 1px #f7f7f7 solid
+    padding: .3rem 0 @sm .5rem 0
+    &:nth-child(1)
+      color: #a9a9aa
+  &__col
+    padding: .25rem 0 @md .35rem 0
+    &:nth-child(1)
+      color: #a9a9aa
+
+  &--dashboard-stats
+    ^&__col
+      &:nth-child(1)
+        width: 25%
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6)
+        width: 15%
+        text-align: center

@@ -1,0 +1,32 @@
+.dashboard
+  box:
+  flex-wrap: wrap @md nowrap
+
+  &__wrapper
+    width: 100% @md calc(100% / 1.5)
+  &__chart
+    margin-bottom: .5rem @sm 1rem
+    &-container
+      box: space-around center
+      flex-direction: column @sm row
+  &__stats
+    margin-bottom: .5rem @sm 1rem @md 0
+  &__widgets
+    width: 100% @md calc(100% / 3 - 0.5rem)
+    margin-left: @md 1rem
+    .card
+      height: 100%
+      box: vertical
+      &__title
+        margin-bottom: 0
+      &__content-light:last-child
+        margin-top: auto
+    .widgets__item-img
+      opacity: .6
+    .widgets__item-status
+      visibility: hidden
+    .widgets__item:hover
+      .widgets__item-img
+        opacity: 1
+      .widgets__item-status
+        visibility: visible

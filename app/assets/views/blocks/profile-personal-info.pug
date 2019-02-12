@@ -1,0 +1,73 @@
+form.form(method="get" action="#")
+  .cards-spacer
+    .card.tab__content
+      .card__content
+        .form__title Информация о пользователе
+          button.btn(type="submit") Сохранить
+        .input.input--required.input--row
+          label.input__label(for="name") Имя
+          input.input__elem(type="text" name="name" id="name" placeholder="Иван")
+        .input.input--row
+          label.input__label(for="surname") Отчество
+          input.input__elem(type="text" name="surname" id="surname" placeholder="Иванович")
+        .input.input--required.input--row
+          label.input__label(for="lastname") Фамилия
+          input.input__elem(type="text" name="lastname" id="lastname" placeholder="Иванов")
+        .input.input--row
+          .input__label Фото
+            .icon.icon--help
+          label.btn(for="photo") Добавить фото
+          input.input__file(type="file" name="photo" id="photo")
+        .input.input--row
+          label.input__label(for="sex") Пол
+          select.input__select(name="sex" id="sex")
+            //- option(value="" selected disabled hidden)
+            option(value="male") Мужской
+            option(value="female") Женский
+        .input.input--required.input--row
+          label.input__label(for="birth") Дата рождения
+            .icon.icon--help
+          input.input__elem(type="text" name="birth" id="birth" placeholder="01.01.1990")
+
+    .card.tab__content
+      .card__content
+        .form__title Контактная информация
+        .input.input--row
+          label.input__label(for="country") Страна
+          select.input__select(name="country" id="country")
+            option(value="ru" selected) Россия
+            option(value="au") Австралия
+        .input.input--row
+          label.input__label(for="region") Регион
+          select.input__select(name="region" id="region")
+            option(value="ru" selected) Москва
+            option(value="au") Сидней
+        .input.input--row
+          label.input__label(for="address") Физический адрес
+          input.input__elem(type="text" name="address" id="address" placeholder="")
+        .input.input--row
+          label.input__label(for="phone_1") Телефоны
+          input.input__elem(type="text" name="phone_1" id="phone_1" placeholder="+7")
+        .input.input--row
+          label.input__label(for="phone_2") Телефоны
+          input.input__elem(type="text" name="phone_2" id="phone_2" placeholder="+7")
+        .input.input--row
+          label.input__label(for="skype") Skype
+          input.input__elem(type="text" name="skype" id="skype" placeholder="")
+
+    .card.tab__content
+      .card__content
+        .form__title Отображение адреса электронной почты
+
+        .form__spacer
+          .input
+            .input__label
+            input.input__checkbox(type="checkbox" name="email-show" id="email-show")
+            label.input__checkbox-label(for="email-show") Отображать e-mail адрес в контактной информации на сайте
+          .info.info--small
+            +svg-icon("attention", "color-warning")
+            .text-content.text-content--small
+              p Обратите внимание! После установки галочки e-mail будет «открыто» написан на сайте, и он наверняка попадете в базу адресов тех, кто осуществляет массовые рассылки (спам).
+
+        .form__footer
+          button.btn(type="submit") Сохранить

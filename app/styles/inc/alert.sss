@@ -1,0 +1,86 @@
+.alert
+  box: vertical @xs horizontal middle
+  padding: .5rem 1rem .75rem @xs .75rem 1rem @md 1rem 1.5rem @lg 1rem 2rem
+  margin: @xs-down * -1rem
+  border-left: @xs-down 0
+  border-right: @xs-down 0
+  border: 1px solid rgba(0, 0, 0, .1)
+  background-color: #fff
+  border-radius: 2px
+
+  &__icon
+    margin-right: 1.1rem @md 1.5rem @lg 2rem
+    margin-bottom: .25rem @xs 0
+    size: 3rem
+    min-width: 3rem
+    box: center middle
+  .btn
+    padding: * 1rem
+    text: 14px @sm 15px
+  .icon--alert-legend
+    margin: * 1rem * .25rem
+    size: 1rem @sm 1.35rem
+
+  &__content
+    width: 100%
+    p
+      text: 14px @sm 15px @md 16px
+    p + .btn--pseudo
+      margin: .5rem *
+  &__title
+    text: #444 700 14px @sm 15px @md 16px
+    margin-bottom: .25rem
+  &__devider
+    margin: 1rem 0
+    height: 1px
+    background: #d0d0d0
+  &__row
+    box: left @md center space-between
+    flex-direction: column @md row
+    &:not(:last-child)
+      border-bottom: 1px solid rgba(0, 0, 0, .1)
+      margin-bottom: .5rem @sm 1rem
+      padding-bottom: .75rem @sm 1rem
+    .btns-spacer
+      margin-left: @md 1rem
+      margin-top: .1rem @sm .25rem @md 0
+      flex-wrap: @md nowrap
+      white-space: @sm nowrap
+
+  &--small
+    padding: .5rem 1rem .75rem @xs .75rem 1rem @md .5rem 1.3rem @lg .5rem 1.3rem
+    ol
+      list-style: decimal
+      padding-left: 1rem @sm 2rem
+      margin-bottom: .35rem
+    p, li
+      text: 13px @sm 13px @md 14px 1.4
+      &:not(:last-child)
+        margin-bottom: .25rem
+    ^&__icon
+      margin-right: 1rem @lg 1.2rem
+      size: 32px
+      min-width: 32px
+    .icon
+      width: 100%
+    h6
+      text: 14px @sm 15px
+      margin-bottom: .1rem
+
+  &--warning
+    background-color: #f7f9f4
+
+  &--danger
+    background-color: #fce3e3
+
+  &--notification
+    box: horizontal middle @xs horizontal middle
+    padding: .5rem 1rem .5rem @xs .5rem 1rem @md .5rem 1.5rem @lg .5rem 2rem
+    ^&__icon
+      height: 55px
+      margin-bottom: 0
+    ^&__content > .btns-spacer
+      padding: .5rem *
+    p > a
+      margin-left: @sm 2rem
+      display: @sm-down block

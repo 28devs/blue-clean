@@ -1,0 +1,39 @@
+.selo-shop
+  margin: 2rem 0
+  &__title
+    @extend .title-block
+    margin-bottom: 1rem
+  &__row
+    box:
+    flex-wrap: wrap @lg nowrap
+    margin: -.25rem @sm -.5rem
+  &__item
+    background-color: #fff
+    margin: .25rem @sm .5rem
+    width: 100% @sm calc(50% - 1rem) @lg calc(100% / 3 - 1rem)
+    text-decoration: none
+    box: center
+    padding: 1.2rem 1rem @sm 1.5rem 1.2rem
+    transition: background .1s ease, box-shadow .2s ease
+    &-icon
+      margin-right: 1.1rem @sm 1.3rem
+      min-width: 85px @sm 90px @xl 110px
+      height: 100%
+      max-height: 50px @xl 60px
+      &.icon-color--widgets
+        min-width: @xl 137px
+        max-height: @xl 83px
+      &.icon-color--rocket
+        min-width: 85px @sm 60px @xl 80px
+    &-title
+      text: #000 18px @sm 20px
+      margin-bottom: .3rem
+    &-text
+      text: #4f4f4f 14px 1.4
+
+    &:hover
+      background: #f4f8fc
+      box-shadow: $shadow-1
+    &:active
+      transform: scale(.995)
+      box-shadow: none

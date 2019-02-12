@@ -1,0 +1,69 @@
+extends layouts/layout.pug
+
+block header
+  +header()
+
+block title
+  title Виджеты
+
+block content
+  +pageInfo("Виджеты", ["Selo.Магазин", "Виджеты"])
+
+  .container
+    .page-desc
+      .page-desc__wrapper
+        .page-desc__title Виджеты
+        .page-desc__text Интеграции со сторонними сервисами — платежными системами, службами доставки, CRM и т.д. Приложения расширяют возможности вашего интернет магазина
+      .page-desc__img
+        .icon-color.icon-color--widgets.icon-color--widgets-size
+
+    .card
+      .card__content
+        .widgets__list
+          .widgets__list-menu-mobile.input
+            select.input__select(name="widget")
+              each item, i in widgetsCategories
+                option(value="" [i === 0 ? 'selected' : ''])= item
+
+          menu.widgets__list-menu.col-menu
+            each item, i in widgetsCategories
+              button.col-menu__item.btn--reset(class=[i === 0 ? 'active' : ''])= item
+
+          section.widgets__list-wrapper
+            each i in [1,2,3,5,6,7,8,9,10,11,12,13,14,15,16,17]
+              article.widgets__item(onclick="showModal('widget')")
+                .widgets__item-status
+                  if (i % 4 === 0 || i === 5)
+                    .icon--connect(data-tippy="Виджет подключен" data-tippy-placement="right")
+
+                  if (i % 4 === 2 || i === 5)
+                    div(data-tippy="Виджет доступен в <a href='#!' class='color-blue link'><b>PRO</b>-пакете</a>" data-tippy-placement="right" data-tippy-interactive="true")
+                      +svg-icon("crown", "color-yellow")
+
+                img.widgets__item-img(src="img/demo/logos/"+i+".png" alt="widget")
+                if (i === 4 || i === 14)
+                  .widgets__item-text Приложения расширяют возможности магазина
+                else if (i === 7)
+                  .widgets__item-text Виджет
+                else
+                  .widgets__item-text Прием онлайн-платежей
+
+    .selo-shop
+      .selo-shop__title <b>SELO.</b>МАГАЗИН
+      .selo-shop__row
+        a.selo-shop__item(href="#!")
+          .selo-shop__item-icon.icon-color.icon-color--widgets
+          .selo-shop__item-wrapper
+            .selo-shop__item-title Виджеты
+            .selo-shop__item-text Приложения для сайта
+        a.selo-shop__item(href="#!")
+          .selo-shop__item-icon.icon-color.icon-color--design
+          .selo-shop__item-wrapper
+            .selo-shop__item-title Дизайны
+            .selo-shop__item-text Платные и Бесплатные шаблоны
+        a.selo-shop__item(href="#!")
+          .selo-shop__item-icon.icon-color.icon-color--rocket
+          .selo-shop__item-wrapper
+            .selo-shop__item-title Услуги
+            .selo-shop__item-text Продвижение, наполнение, позиционирование
+

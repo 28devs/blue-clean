@@ -1,0 +1,80 @@
+.btns-spacer
+  box: center wrap
+  margin: -.2rem @sm -.3rem
+  > *
+    margin: .2rem @sm .3rem
+  &--to-right
+    justify-content: flex-end
+  & + &
+    margin-top: .25rem @sm .5rem
+
+.light-spacer
+  > *:not(:last-child)
+    margin-bottom: .5rem @sm .5rem
+
+.cards-spacer
+  > *:not(:last-child)
+    margin-bottom: .5rem @sm 1rem
+
+.alerts-spacer
+  margin-bottom: 1.5rem @sm 2.5rem
+  > *:not(:last-child)
+    margin-bottom: .5rem @sm 1rem
+
+.devider-list
+  > *
+    background: transparent
+    margin-top: 0 !important
+    border-width: 0
+    &:not(:last-child)
+      border-bottom-width: 1px
+
+.space-saver
+  .info + *
+    margin-top: .5rem
+  hr, .devider
+    margin: .6rem 0
+
+.justify-between
+  box: space-between
+  > *
+    margin: 0 *
+
+body .items-justify-around
+  display: flex
+  justify-content: space-around
+  flex-direction: column @sm row
+  align-items: center
+  > *
+    margin: 0 *
+  > .info + .info
+    margin-top: @sm 0
+
+body
+  @for $i from 1 to 8
+    .mt-$i, .my-$i
+      margin-top: calc(2rem * ($(i) / 8)) !important
+    .mr-$i, .mx-$i
+      margin-right: calc(2rem * ($(i) / 8)) !important
+    .mb-$i, .my-$i
+      margin-bottom: calc(2rem * ($(i) / 8)) !important
+    .ml-$i, .mx-$i
+      margin-left: calc(2rem * ($(i) / 8)) !important
+    .m-$i
+      margin: calc(2rem * ($(i) / 8)) !important
+  .mt-0, .my-0
+    margin-top: 0 !important
+  .mr-0, .mx-0
+    margin-right: 0 !important
+  .mb-0, .my-0
+    margin-bottom: 0 !important
+  .ml-0, .mx-0
+    margin-left: 0 !important
+  .mt-auto
+    margin-top: auto !important
+  .ml-auto
+    margin-left: auto !important
+  .mb-auto
+    margin-bottom: auto !important
+  .mr-auto
+    margin-right: auto !important

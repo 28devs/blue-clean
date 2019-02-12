@@ -2,3 +2,97 @@ body
   text: $text-black 400 16px 1.5
   font-family: $font
   background: #eff1f6
+
+b, strong, .text-bold
+  font-weight: bold
+i, .text-italic
+  font-style: italic
+small, .text-small
+  font-size: 87.65%
+hr, .devider
+  margin: 1rem 0
+  border: 0
+  border-top: 1px solid rgba(0, 0, 0, 0.1)
+  size: 100% 0
+mark, .mark
+  background-color: rgba(255, 158, 0, 0.28)
+  padding: .1rem .4rem
+  color: rgba(0, 0, 0, .8)
+
+a:not([class]), .link
+  text-decoration: none
+  color: $link
+  display: inline-block
+  &:hover
+    color: $main-light
+  &:active
+    color: $main-dark
+
+.text-content h1, .h1
+  text: 34px 1.2
+  margin-bottom: 1.2rem
+.text-content h2, .h2
+  text: 28px 1.2
+  margin-bottom: 1.2rem
+.text-content h3, .h3
+  text: 24px 1.2
+  margin-bottom: .9rem
+.text-content h4, .h4
+  text: 20px 1.2
+  margin-bottom: .6rem
+.text-content h5, .h5
+  text: 18px 1.2
+  margin-bottom: .6rem
+.text-content h6, .h6
+  text: 16px 1.2
+  margin-bottom: .6rem
+.text-content p, .text-content li, .text
+  text: 14px 1.6 @xs 15px 1.5 @md 16px
+  margin-bottom: .5rem
+.text-content--small p, .text-content--small li, .text-content--small .text
+  text: 14px 1.6 @xs 14px 1.5 @md 14px
+  margin-bottom: .25rem
+.text-content ol, .list-decimal
+  list-style: decimal
+  padding-left: 1rem
+  margin-bottom: .5rem
+  li
+    margin-bottom: 0
+.text-content--small ol, .text-content--small .list-decimal
+  margin-bottom: .25rem
+  li
+    margin-bottom: 0
+h1, h2, h3, h4, h5, h6, p,
+.h1, .h2, .h3, .h4, .h5, .h6, .text
+  &:last-child
+    margin-bottom: 0
+
+.title-block
+  text: #4e4e4e 18px 1.2 3.6px
+  text-transform: uppercase
+
+.color-main
+  color: $main !important
+.color-blue
+  color: #9ACFFB !important
+.color-warning
+  color: $warning !important
+.color-success
+  color: $success !important
+.color-danger
+  color: $danger !important
+.color-dark
+  color: $dark !important
+.color-grey
+  color: $grey !important
+  &-dark
+    color: $grey-dark !important
+  &-light
+    color: $grey-light !important
+
+.text-left
+  text-align: left
+.text-center
+  text-align: center
+.text-right
+  text-align: right
